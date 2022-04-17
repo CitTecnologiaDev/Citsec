@@ -1,8 +1,7 @@
 <template>
 	<div class="layout-topbar">
 		<router-link to="/" class="layout-topbar-logo">
-			<img alt="Logo" :src="topbarImage()" />
-			<span>SAKAI</span>
+			<img alt="Logo" :src="topbarImage()"/>
 		</router-link>
 		<button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle">
 			<i class="pi pi-bars"></i>
@@ -17,19 +16,19 @@
 			<li>
 				<button class="p-link layout-topbar-button">
 					<i class="pi pi-calendar"></i>
-					<span>Events</span>
+					<span>Eventos</span>
 				</button>
 			</li>
 			<li>
 				<button class="p-link layout-topbar-button">
 					<i class="pi pi-cog"></i>
-					<span>Settings</span>
+					<span>Configurações</span>
 				</button>
 			</li>
 			<li>
 				<button class="p-link layout-topbar-button">
 					<i class="pi pi-user"></i>
-					<span>Profile</span>
+					<span>Perfil</span>
 				</button>
 			</li>
 		</ul>
@@ -46,12 +45,12 @@ export default {
             this.$emit('topbar-menu-toggle', event);
         },
 		topbarImage() {
-			return this.$appState.darkTheme ? 'images/logo-white.svg' : 'images/logo-dark.svg';
+			return 'layout/images/citsec.png';
 		}
     },
 	computed: {
 		darkTheme() {
-			return this.$appState.darkTheme;
+			return 'layout/images/citsec.png';
 		}
 	}
 }
