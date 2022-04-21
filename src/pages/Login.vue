@@ -27,7 +27,7 @@
                                 <Checkbox id="rememberme1" v-model="checked" :binary="true" class="mr-2"></Checkbox>
                                 <label for="rememberme1">Lembre-me</label>
                             </div>
-                            <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: #3783c6">Esqueci minha senha?</a>
+                            <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: #3783c6">Esqueci minha senha!</a>
                         </div>
                         <Button label="Entrar" class="w-full p-3 text-xl"></button>
                     </div>

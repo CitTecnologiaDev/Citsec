@@ -1,7 +1,8 @@
 .layout-sidebar {
 	position: fixed;
 	width: 300px;
-	height: calc(100vh - 9rem);
+	// height: calc(100vh - 9rem);
+    height: 670px;
 	z-index: 999;
 	overflow-y: auto;
 	user-select: none;
@@ -30,7 +31,7 @@
         
         .layout-menuitem-root-text {
             text-transform: uppercase;
-            color:var(--surface-900);
+            color: #3783c6;
             font-weight: 600;
             margin-bottom: .5rem;
             font-size: .875rem;
@@ -65,7 +66,7 @@
 
             &.router-link-exact-active {
                 font-weight: 700;
-                color: var(--primary-color);
+                color: #3783c6;
             }
 
             .p-badge {

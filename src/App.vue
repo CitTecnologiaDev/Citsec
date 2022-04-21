@@ -38,27 +38,43 @@ export default {
                     label: 'Home',
                     items: [{
                         label: 'Painel', icon: 'pi pi-fw pi-home', to: '/'
-                    }]
+                    },
+                    {label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login'}
+                    ]
                 },
 				{
 					label: 'Ferramentas', icon: 'pi pi-fw pi-sitemap',
 					items: [
-						{label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/formlayout'},
-						{label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/input'},
-                        {label: "Float Label", icon: "pi pi-fw pi-bookmark", to: "/floatlabel"},
-                        {label: "Invalid State", icon: "pi pi-fw pi-exclamation-circle", to: "/invalidstate"},
-						{label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/button'},
-						{label: 'Table', icon: 'pi pi-fw pi-table', to: '/table'},
-						{label: 'List', icon: 'pi pi-fw pi-list', to: '/list'},
-						{label: 'Tree', icon: 'pi pi-fw pi-share-alt', to: '/tree'},
-						{label: 'Panel', icon: 'pi pi-fw pi-tablet', to: '/panel'},
-						{label: 'Overlay', icon: 'pi pi-fw pi-clone', to: '/overlay'},
-                        {label: "Media", icon: "pi pi-fw pi-image", to: "/media"},
-						{label: 'Menu', icon: 'pi pi-fw pi-bars', to: '/menu'},
-						{label: 'Message', icon: 'pi pi-fw pi-comment', to: '/messages'},
-						{label: 'File', icon: 'pi pi-fw pi-file', to: '/file'},
-						{label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/chart'},
-						{label: 'Misc', icon: 'pi pi-fw pi-circle-off', to: '/misc'},
+						// {label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/formlayout'},
+						// {label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/input'},
+                        // {label: "Float Label", icon: "pi pi-fw pi-bookmark", to: "/floatlabel"},
+                        // {label: "Invalid State", icon: "pi pi-fw pi-exclamation-circle", to: "/invalidstate"},
+						// {label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/button'},
+						// {label: 'Table', icon: 'pi pi-fw pi-table', to: '/table'},
+						// {label: 'List', icon: 'pi pi-fw pi-list', to: '/list'},
+						// {label: 'Tree', icon: 'pi pi-fw pi-share-alt', to: '/tree'},
+						// {label: 'Panel', icon: 'pi pi-fw pi-tablet', to: '/panel'},
+						// {label: 'Overlay', icon: 'pi pi-fw pi-clone', to: '/overlay'},
+                        // {label: "Media", icon: "pi pi-fw pi-image", to: "/media"},
+						// {label: 'Menu', icon: 'pi pi-fw pi-bars', to: '/menu'},
+						// {label: 'Message', icon: 'pi pi-fw pi-comment', to: '/messages'},
+						// {label: 'File', icon: 'pi pi-fw pi-file', to: '/file'},
+						// {label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/chart'},
+						// {label: 'Misc', icon: 'pi pi-fw pi-circle-off', to: '/misc'},
+
+                        {label: 'Treinamento'},
+                        {label: 'Questionários'},
+                        {label: 'Gaps'},
+                        {label: 'Mapeamento'},
+                        {label: 'Plano de ação'},
+                        {label: 'Gestão de riscos'},
+                        {label: 'Relatórios'},
+                        {label: 'Modelo de contratos'},
+                        {label: 'Colaboradores'},
+                        {label: 'Canal do DPO'},
+                        {label: 'Empresa'},
+                        {label: 'Suporte'},
+
 					]
 				},
                 // {
@@ -75,19 +91,19 @@ export default {
                 //         {label: 'PrimeFlex', icon: 'pi pi-fw pi-desktop', url: 'https://www.primefaces.org/primeflex/', target: '_blank'},
                 //     ]
                 // },
-				{
-					label: 'Páginas', icon: 'pi pi-fw pi-clone',
-					items: [
-						{label: 'Crud', icon: 'pi pi-fw pi-user-edit', to: '/crud'},
-						{label: 'Timeline', icon: 'pi pi-fw pi-calendar', to: '/timeline'},
-                        {label: 'Landing', icon: 'pi pi-fw pi-globe', to: '/landing'},
-                        {label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login'},
-                        {label: 'Error', icon: 'pi pi-fw pi-times-circle', to: '/error'},
-                        {label: 'Not Found', icon: 'pi pi-fw pi-exclamation-circle', to: '/notfound'},
-                        {label: 'Access Denied', icon: 'pi pi-fw pi-lock', to: '/access'},
-						{label: 'Empty', icon: 'pi pi-fw pi-circle-off', to: '/empty'},
-					]
-				},
+				// {
+				// 	label: 'Páginas', icon: 'pi pi-fw pi-clone',
+				// 	items: [
+				// 		{label: 'Crud', icon: 'pi pi-fw pi-user-edit', to: '/crud'},
+				// 		{label: 'Timeline', icon: 'pi pi-fw pi-calendar', to: '/timeline'},
+                //         {label: 'Landing', icon: 'pi pi-fw pi-globe', to: '/landing'},
+                //         {label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login'},
+                //         {label: 'Error', icon: 'pi pi-fw pi-times-circle', to: '/error'},
+                //         {label: 'Not Found', icon: 'pi pi-fw pi-exclamation-circle', to: '/notfound'},
+                //         {label: 'Access Denied', icon: 'pi pi-fw pi-lock', to: '/access'},
+				// 		{label: 'Empty', icon: 'pi pi-fw pi-circle-off', to: '/empty'},
+				// 	]
+				// },
                 // {
                 //     label: 'Menu Hierarchy', icon: 'pi pi-fw pi-search',
                 //     items: [
