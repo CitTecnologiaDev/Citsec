@@ -39,12 +39,12 @@ export default {
                     items: [{
                         label: 'Painel', icon: 'pi pi-fw pi-home', to: '/'
                     },
-                    {label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login'}
-                    ]
-                },
-				{
-					label: 'Ferramentas', icon: 'pi pi-fw pi-sitemap',
-					items: [
+                    {label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login'},
+                    // ]
+                // },
+				// {
+					// label: 'Ferramentas', icon: 'pi pi-fw pi-sitemap',
+					// items: [
 						// {label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/formlayout'},
 						// {label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/input'},
                         // {label: "Float Label", icon: "pi pi-fw pi-bookmark", to: "/floatlabel"},
