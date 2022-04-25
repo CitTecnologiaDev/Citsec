@@ -62,7 +62,7 @@ export default {
 						// {label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/chart'},
 						// {label: 'Misc', icon: 'pi pi-fw pi-circle-off', to: '/misc'},
 
-                        {label: 'Treinamento'},
+                        {label: 'Treinamento', to: '/list'},
                         {label: 'Questionários'},
                         {label: 'Gaps'},
                         {label: 'Mapeamento'},
