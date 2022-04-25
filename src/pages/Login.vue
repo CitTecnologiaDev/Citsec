@@ -8,7 +8,7 @@
             <div class="col-12 xl:col-6" style="border-radius:56px; padding:0.3rem;">
                 
                 <!-- border-radius:53px; background: linear-gradient(180deg, var(--surface-50) 38.9%, var(--surface-0)); -->
-                <div class="h-full w-full m-0 py-7 px-4" style="box-shadow: 0px 14px 80px; rgba(34, 35, 58, 0.2); border-radius:56px; padding:0.3rem;">
+                <div class="h-full w-full m-0 py-7 px-4" style="box-shadow: 0px 5px 17px; rgba(34, 35, 58, 0.2); border-radius:56px; padding:0.3rem;">
                     <div class="text-center mb-5">
                         <!-- <img src="layout/images/avatar.png" alt="Image" height="50" class="mb-3"> -->
                         <!-- <div class="text-900 text-3xl font-medium mb-3">Welcome, Isabel!</div>
