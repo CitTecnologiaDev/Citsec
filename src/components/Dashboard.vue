@@ -11,7 +11,7 @@
 						<!-- <i class="pi pi-shopping-cart text-blue-500 text-xl"></i> -->
 					</div>
 				</div>
-				<span class="text-green-500 font-medium">24 novos processos </span>
+				<span class="text-green-500 font-medium">24 novos </span>
 				<span class="text-500">desde o último acesso</span>
 			</div>
 		</div>

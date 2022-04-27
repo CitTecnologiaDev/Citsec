@@ -388,7 +388,7 @@
                 </div>
               </div>
               <span class="text-green-500 font-medium"
-                >24 novos processos
+                >24 novos
               </span>
               <span class="text-500">desde o último acesso</span>
             </div>
