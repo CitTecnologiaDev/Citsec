@@ -20,7 +20,8 @@
                         <InputText id="email1" v-model="email" type="text" class="w-full mb-3" style="padding:1rem;" />
                 
                         <label for="password1" class="block text-900 font-medium text-xl mb-2">Senha</label>
-                        <Password id="password1" v-model="password" :toggleMask="true" class="w-full mb-3" inputClass="w-full" inputStyle="padding:1rem"></Password>
+                        <!-- <Password id="password1" v-model="password" :toggleMask="true" class="w-full mb-3" inputClass="w-full" inputStyle="padding:1rem"></Password> -->
+                        <InputText id="password1" v-model="password" type="text" class="w-full mb-3" style="padding:1rem;" />
                 
                         <div class="flex align-items-center justify-content-between mb-5">
                             <div class="flex align-items-center">
@@ -32,7 +33,9 @@
                         <!-- <Button label="Entrar" class="p-3 text-xl"></button> -->
                     </div>
                     <div style="text-align: center; justifyContent: center; display: flex;">
-                        <Button label="Entrar" class="p-3 text-xl" style="width: 250px"></button>
+                        <a href="/dashboard">
+                            <Button label="Entrar" class="p-3 text-xl" style="width: 250px"></button>
+                        </a>
                     </div>
                 </div>
             </div>
