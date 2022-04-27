@@ -15,7 +15,7 @@
                         <span class="text-600 font-medium">Sign in to continue</span> -->
                     </div>
                 
-                    <div class="w-full md:w-10 mx-auto">
+                    <div class="md:w-10 mx-auto">
                         <label for="email1" class="block text-900 text-xl font-medium mb-2">Usuário</label>
                         <InputText id="email1" v-model="email" type="text" class="w-full mb-3" style="padding:1rem;" />
                 
@@ -29,7 +29,10 @@
                             </div>
                             <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: #3783c6">Esqueci minha senha!</a>
                         </div>
-                        <Button label="Entrar" class="w-full p-3 text-xl"></button>
+                        <!-- <Button label="Entrar" class="p-3 text-xl"></button> -->
+                    </div>
+                    <div style="text-align: center; justifyContent: center; display: flex;">
+                        <Button label="Entrar" class="p-3 text-xl" style="width: 250px"></button>
                     </div>
                 </div>
             </div>
