@@ -2,9 +2,9 @@
 	<div class="grid">
 		<div class="col-12">
 			<div class="card">
-				<h5>DataView</h5>
+				<h5>Treinamento</h5>
 				<DataView :value="dataviewValue" :layout="layout" :paginator="true" :rows="9" :sortOrder="sortOrder" :sortField="sortField">
-					<template #header>
+					<!-- <template #header>
 						<div class="grid grid-nogutter">
 							<div class="col-6 text-left">
 								<Dropdown v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By Price" @change="onSortChange($event)"/>
@@ -13,7 +13,7 @@
 								<DataViewLayoutOptions v-model="layout" />
 							</div>
 						</div>
-					</template>
+					</template> -->
 					<template #list="slotProps">
 						<div class="col-12">
 							<div class="flex flex-column md:flex-row align-items-center p-3 w-full">
@@ -30,7 +30,7 @@
 								</div>
 								<div class="flex flex-row md:flex-column justify-content-between w-full md:w-auto align-items-center md:align-items-end mt-5 md:mt-0">
 									<span class="text-2xl font-semibold mb-2 align-self-center md:align-self-end">${{slotProps.data.price}}</span>
-									<Button icon="pi pi-shopping-cart" label="Add to Cart" :disabled="slotProps.data.inventoryStatus === 'OUTOFSTOCK'" class="mb-2"></Button>
+									<!-- <Button icon="pi pi-shopping-cart" label="Add to Cart" :disabled="slotProps.data.inventoryStatus === 'OUTOFSTOCK'" class="mb-2"></Button> -->
 									<span :class="'product-badge status-'+slotProps.data.inventoryStatus.toLowerCase()">{{slotProps.data.inventoryStatus}}</span>
 								</div>
 							</div>
@@ -54,8 +54,8 @@
 									<Rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false"></Rating>
 								</div>
 								<div class="flex align-items-center justify-content-between">
-									<span class="text-2xl font-semibold">${{slotProps.data.price}}</span>
-									<Button icon="pi pi-shopping-cart" :disabled="slotProps.data.inventoryStatus === 'OUTOFSTOCK'"></Button>
+									<!-- <span class="text-2xl font-semibold">${{slotProps.data.price}}</span> -->
+									<!-- <Button icon="pi pi-shopping-cart" :disabled="slotProps.data.inventoryStatus === 'OUTOFSTOCK'"></Button> -->
 								</div>
 							</div>
 						</div>
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 
-		<div class="col-12 lg:col-8">
+		<!-- <div class="col-12 lg:col-8">
 			<div class="card">
 				<h5>PickList</h5>
 				<PickList v-model="picklistValue" listStyle="height:250px" dataKey="code">
@@ -79,9 +79,9 @@
 					</template>
 				</PickList>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-12 lg:col-4">
+		<!-- <div class="col-12 lg:col-4">
 			<div class="card">
 				<h5>OrderList</h5>
 				<OrderList v-model="orderlistValue" listStyle="height:250px" dataKey="code" :rows="10">
@@ -93,7 +93,7 @@
 					</template>
 				</OrderList>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </template>
 

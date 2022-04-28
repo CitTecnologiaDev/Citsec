@@ -1443,7 +1443,7 @@
   margin-left: 0;
 }
 .p-rating .p-rating-icon.pi-star-fill {
-  color: #6366F1;
+  color: #3783c6;
 }
 .p-rating:not(.p-disabled):not(.p-readonly) .p-rating-icon:hover {
   color: #6366F1;

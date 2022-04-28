@@ -11,7 +11,12 @@ const routes = [
                 path: '',
                 name: 'dashboard',
                 component: () => import('./components/Dashboard.vue')
-            },
+            }, 
+            // {
+            //     path: '/dashboard',
+            //     name: 'dashboard',
+            //     component: () => import('./components/Dashboard.vue')
+            // },
             {
                 path: '/formlayout',
                 name: 'formlayout',
