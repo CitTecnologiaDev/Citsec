@@ -44,7 +44,7 @@
 							<div class="card m-3 border-1 surface-border">
 								<div class="flex align-items-center justify-content-between">
 									<div class="flex align-items-center">
-										<i class="pi pi-tag mr-2"></i>
+										<!-- <i class="pi pi-tag mr-2"></i> -->
 										<span class="font-semibold">{{slotProps.data.category}}</span>
 									</div>
 									<span :class="'product-badge status-'+slotProps.data.inventoryStatus.toLowerCase()">{{slotProps.data.inventoryStatus}}</span>
