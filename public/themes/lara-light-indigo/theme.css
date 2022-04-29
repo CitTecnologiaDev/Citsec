@@ -40,7 +40,7 @@
   --surface-overlay:#ffffff;
   --surface-border:#dfe7ef;
   --surface-hover:#f6f9fc;
-  --focus-ring: 0 0 0 0.2rem #C7D2FE;
+  --focus-ring: 0 0 0 0.2rem #3783c6;
   --maskbg: rgba(0, 0, 0, 0.4);
 }
 
@@ -2469,7 +2469,7 @@
 }
 .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
   background: #EEF2FF;
-  color: #4338CA;
+  color: #3783c6;
 }
 
 .p-datatable .p-paginator-top {
@@ -3307,7 +3307,7 @@
 .p-paginator .p-paginator-pages .p-paginator-page {
   background-color: transparent;
   border: 0 none;
-  color: #6c757d;
+  color: #3783c6;
   min-width: 3rem;
   height: 3rem;
   margin: 0.143rem;
@@ -3317,7 +3317,7 @@
 .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
   background: #EEF2FF;
   border-color: #EEF2FF;
-  color: #4338CA;
+  color: #3783c6;
 }
 .p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
   background: #e9ecef;
