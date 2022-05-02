@@ -27,6 +27,11 @@ const routes = [
                 name: 'input',
                 component: () => import('./components/InputDemo.vue')
             },
+            // {
+            //     path: '/questionario',
+            //     name: 'questionario',
+            //     component: () => import('./components/Questionario.vue')
+            // },
             {
                 path: '/floatlabel',
                 name: 'floatlabel',

@@ -1,8 +1,36 @@
 <template>
-	<div class="grid p-fluid">
-		<div class="col-12 md:col-6">
-			<div class="card">
-				<h5>InputText</h5>
+  <!-- <div class="grid p-fluid"> -->
+  <div
+    style="
+      position: center;
+      width: 1316px;
+      height: 700px;
+      left: 25px;
+      top: 34px;
+      background: #ffffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+    "
+  >
+    <InputText type="text" v-model="value" />
+
+    <span
+      class="p-float-label"
+      style="
+        position: absolute;
+        width: 313px;
+        height: 33px;
+        left: 54px;
+        top: 153px;
+      "
+    >
+      <InputText id="username" type="text" v-model="value" />
+      <label for="username">Username</label>
+    </span>
+
+    <!-- <div style="position: center; width: 1316px; height: 700px; left: 25px; top: 34px; background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 4px;"> -->
+    <!-- <div class="card"> -->
+    <!-- <h5>InputText</h5>
 				<div class="grid formgrid">
 					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
 						<InputText type="text" placeholder="Default"></InputText>
@@ -13,9 +41,9 @@
 					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
 						<InputText type="text" placeholder="Invalid" class="p-invalid" />
 					</div>
-				</div>
+				</div>  -->
 
-				<h5>Icons</h5>
+    <!-- <h5>Icons</h5>
 				<div class="grid formgrid">
 					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
 						<span class="p-input-icon-left">
@@ -36,15 +64,15 @@
 							<i class="pi pi-search" />
 						</span>
 					</div>
-				</div>
+				</div> -->
 
-				<h5>Float Label</h5>
+    <!-- <h5>Float Label</h5>
 				<span class="p-float-label">
 					<InputText id="username" type="text" v-model="floatValue"/>
 					<label for="username">Username</label>
-				</span>
+				</span> -->
 
-				<h5>Textarea</h5>
+    <!-- <h5>Textarea</h5>
 				<Textarea placeholder="Your Message" :autoResize="true" rows="3" cols="30" />
 
 				<h5>AutoComplete</h5>
@@ -57,10 +85,10 @@
 				<InputNumber v-model="inputNumberValue" showButtons mode="decimal"></InputNumber>
 
 				<h5>Chips</h5>
-				<Chips v-model="chipsValue"/>
-			</div>
+				<Chips v-model="chipsValue"/> -->
+    <!-- </div> -->
 
-			<div class="card">
+    <!-- <div class="card">
 				<div class="grid">
 					<div class="col-12">
 						<h5>Slider</h5>
@@ -80,10 +108,11 @@
 						<Knob v-model="knobValue" :step="10" :min="-50" :max="50" valueTemplate="{value}%" />
 					</div>
 				</div>
-			</div>
-		</div>
+			</div> -->
 
-		<div class="col-12 md:col-6">
+    <!-- </div> -->
+
+    <!-- <div class="col-12 md:col-6">
 			<div class="card">
 				<h5>RadioButton</h5>
 				<div class="grid">
@@ -212,102 +241,105 @@
 							</span>
 							<InputText placeholder="Confirm"/>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+					</div> -->
+    <!-- </div>  -->
+    <!-- </div> -->
+    <!-- </div> -->
+  </div>
 </template>
 <script>
-	import CountryService from '../service/CountryService';
-	import NodeService from '../service/NodeService';
-	export default {
-		data() {
-			return {
-				floatValue: null,
-				autoValue: null,
-				selectedAutoValue: null,
-				autoFilteredValue: [],
-				calendarValue: null,
-				inputNumberValue: null,
-				chipsValue: null,
-				sliderValue: 50,
-				ratingValue: null,
-				colorValue: '1976D2',
-				radioValue: null,
-				checkboxValue: [],
-				switchValue: false,
-				listboxValues: [
-					{name: 'New York', code: 'NY'},
-					{name: 'Rome', code: 'RM'},
-					{name: 'London', code: 'LDN'},
-					{name: 'Istanbul', code: 'IST'},
-					{name: 'Paris', code: 'PRS'}
-				],
-				listboxValue: null,
-				dropdownValues: [
-					{name: 'New York', code: 'NY'},
-					{name: 'Rome', code: 'RM'},
-					{name: 'London', code: 'LDN'},
-					{name: 'Istanbul', code: 'IST'},
-					{name: 'Paris', code: 'PRS'}
-				],
-				dropdownValue: null,
-				multiselectValue: null,
-				multiselectValues: [
-					{name: 'Australia', code: 'AU'},
-					{name: 'Brazil', code: 'BR'},
-					{name: 'China', code: 'CN'},
-					{name: 'Egypt', code: 'EG'},
-					{name: 'France', code: 'FR'},
-					{name: 'Germany', code: 'DE'},
-					{name: 'India', code: 'IN'},
-					{name: 'Japan', code: 'JP'},
-					{name: 'Spain', code: 'ES'},
-					{name: 'United States', code: 'US'}
-				],
-				toggleValue: false,
-				selectButtonValues1: [
-					{name: 'Option 1', code: 'O1'},
-					{name: 'Option 2', code: 'O2'},
-					{name: 'Option 3', code: 'O3'},
-				],
-				selectButtonValue1: null,
-				selectButtonValues2: [
-					{name: 'Option 1', code: 'O1'},
-					{name: 'Option 2', code: 'O2'},
-					{name: 'Option 3', code: 'O3'},
-				],
-				selectButtonValue2: null,
-				inputGroupValue: false,
-				knobValue: 20,
-				treeSelectNodes: null,
-				selectedNode: null,
-			}
-		},
-		countryService: null,
-		nodeService: null,
-		created() {
-			this.countryService = new CountryService();
-			this.nodeService = new NodeService();
-		},
-		mounted() {
-			this.countryService.getCountries().then(data => this.autoValue = data);
-			this.nodeService.getTreeNodes().then(data => this.treeSelectNodes = data);
-		},
-		methods: {
-			searchCountry(event) {
-				setTimeout(() => {
-					if (!event.query.trim().length) {
-						this.autoFilteredValue = [...this.autoValue];
-					}
-					else {
-						this.autoFilteredValue = this.autoValue.filter((country) => {
-							return country.name.toLowerCase().startsWith(event.query.toLowerCase());
-						});
-					}
-				}, 250);
-			}
-		}
-	}
+import CountryService from "../service/CountryService";
+import NodeService from "../service/NodeService";
+export default {
+  data() {
+    return {
+      floatValue: null,
+      autoValue: null,
+      selectedAutoValue: null,
+      autoFilteredValue: [],
+      calendarValue: null,
+      inputNumberValue: null,
+      chipsValue: null,
+      sliderValue: 50,
+      ratingValue: null,
+      colorValue: "1976D2",
+      radioValue: null,
+      checkboxValue: [],
+      switchValue: false,
+      listboxValues: [
+        { name: "New York", code: "NY" },
+        { name: "Rome", code: "RM" },
+        { name: "London", code: "LDN" },
+        { name: "Istanbul", code: "IST" },
+        { name: "Paris", code: "PRS" },
+      ],
+      listboxValue: null,
+      dropdownValues: [
+        { name: "New York", code: "NY" },
+        { name: "Rome", code: "RM" },
+        { name: "London", code: "LDN" },
+        { name: "Istanbul", code: "IST" },
+        { name: "Paris", code: "PRS" },
+      ],
+      dropdownValue: null,
+      multiselectValue: null,
+      multiselectValues: [
+        { name: "Australia", code: "AU" },
+        { name: "Brazil", code: "BR" },
+        { name: "China", code: "CN" },
+        { name: "Egypt", code: "EG" },
+        { name: "France", code: "FR" },
+        { name: "Germany", code: "DE" },
+        { name: "India", code: "IN" },
+        { name: "Japan", code: "JP" },
+        { name: "Spain", code: "ES" },
+        { name: "United States", code: "US" },
+      ],
+      toggleValue: false,
+      selectButtonValues1: [
+        { name: "Option 1", code: "O1" },
+        { name: "Option 2", code: "O2" },
+        { name: "Option 3", code: "O3" },
+      ],
+      selectButtonValue1: null,
+      selectButtonValues2: [
+        { name: "Option 1", code: "O1" },
+        { name: "Option 2", code: "O2" },
+        { name: "Option 3", code: "O3" },
+      ],
+      selectButtonValue2: null,
+      inputGroupValue: false,
+      knobValue: 20,
+      treeSelectNodes: null,
+      selectedNode: null,
+    };
+  },
+  countryService: null,
+  nodeService: null,
+  created() {
+    this.countryService = new CountryService();
+    this.nodeService = new NodeService();
+  },
+  mounted() {
+    this.countryService.getCountries().then((data) => (this.autoValue = data));
+    this.nodeService
+      .getTreeNodes()
+      .then((data) => (this.treeSelectNodes = data));
+  },
+  methods: {
+    searchCountry(event) {
+      setTimeout(() => {
+        if (!event.query.trim().length) {
+          this.autoFilteredValue = [...this.autoValue];
+        } else {
+          this.autoFilteredValue = this.autoValue.filter((country) => {
+            return country.name
+              .toLowerCase()
+              .startsWith(event.query.toLowerCase());
+          });
+        }
+      }, 250);
+    },
+  },
+};
 </script>
