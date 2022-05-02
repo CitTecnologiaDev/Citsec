@@ -3,29 +3,64 @@
   <div
     style="
       position: center;
-      width: 1316px;
+      width: 900px;
       height: 700px;
       left: 25px;
       top: 34px;
-      background: #ffffff;
+	  padding-top: 20px;
+      background: #c4b;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
     "
   >
-    <InputText type="text" v-model="value" />
+    <span
+      class="p-float-label"
+      style="
+        width: 850px;
+        height: 33px;
+        left: 15px;
+		padding-top: 20px;
+        background: #f32;
+      "
+    >
+    Home / Page 01 / Page 02 / Page 03</span>
 
     <span
       class="p-float-label"
       style="
-        position: absolute;
-        width: 313px;
-        height: 33px;
-        left: 54px;
-        top: 153px;
+        width: 850px;
+        height: 70px;
+        left: 15px;
+		padding-top: 10px;
+        background: #BC3;
       "
     >
-      <InputText id="username" type="text" v-model="value" />
-      <label for="username">Username</label>
+    Mapeamento de processos, dados e registro de atividades</span>
+
+	<span
+      class="p-float-label"
+      style="
+        width: 850px;
+		padding: 10px;
+        height: 70px;
+        left: 15px;
+       	padding-top: 10px;
+        background: #ABC;
+      "
+    >
+    </span>
+
+	<span
+      class="p-float-label"
+      style="
+        width: 850px;
+		padding: 10px;
+        height: 400px;
+        left: 15px;
+        padding-top: 10px;
+        background: #ABA;
+      "
+    >
     </span>
 
     <!-- <div style="position: center; width: 1316px; height: 700px; left: 25px; top: 34px; background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 4px;"> -->
