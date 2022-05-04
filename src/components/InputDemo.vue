@@ -3,65 +3,92 @@
   <div
     style="
       position: center;
-      width: 900px;
+      width: 100%;
       height: 700px;
       left: 25px;
       top: 34px;
-	  padding-top: 20px;
+      padding-top: 20px;
       background: #c4b;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
     "
   >
+
     <span
       class="p-float-label"
       style="
         width: 850px;
         height: 33px;
         left: 15px;
-		padding-top: 20px;
+        padding-top: 20px;
         background: #f32;
       "
     >
-    Home / Page 01 / Page 02 / Page 03</span>
+      Home / Page 01 / Page 02 / Page 03</span
+    >
 
     <span
       class="p-float-label"
       style="
         width: 850px;
-        height: 70px;
-        left: 15px;
-		padding-top: 10px;
-        background: #BC3;
-      "
-    >
-    Mapeamento de processos, dados e registro de atividades</span>
-
-	<span
-      class="p-float-label"
-      style="
-        width: 850px;
-		padding: 10px;
-        height: 70px;
-        left: 15px;
-       	padding-top: 10px;
-        background: #ABC;
-      "
-    >
-    </span>
-
-	<span
-      class="p-float-label"
-      style="
-        width: 850px;
-		padding: 10px;
-        height: 400px;
+        height: 40px;
         left: 15px;
         padding-top: 10px;
-        background: #ABA;
+        background: #bc3;
+      "
+    >
+      Mapeamento de processos, dados e registro de atividades</span
+    >
+    <span
+      class="p-float-label"
+      style="
+        width: 850px;
+        height: 40px;
+        left: 15px;
+        padding-top: 10px;
+        background: #AF2;
       "
     >
     </span>
+    <span
+      class="p-float-label"
+      style="
+        width: 100%;
+        padding: 10px;
+        height: 400px;
+        
+        padding-top: 10px;
+        background: #aba;
+      "
+    >
+
+	<div>
+        <DataTable :value="products" responsiveLayout="scroll" style="">
+            <Column field="id" header="ID"></Column>
+            <Column field="name" header="Nome"></Column>
+            <Column field="descricao" header="Descrição"></Column>
+            <Column field="area" header="Área"></Column>
+			<Column field="grupo" header="Grupo"></Column>
+			<Column field="unidade" header="Unidade"></Column>
+			<Column field="acoes" header="Ações"></Column>
+        </DataTable>
+    </div>
+	
+    </span>
+
+	<div
+      style="
+        width: 850px;
+        height: 40px;
+		position: right;
+        left: 15px;
+        padding-top: 70px;
+        background: #AF2;
+      "
+    >
+    </div>
+
+	
 
     <!-- <div style="position: center; width: 1316px; height: 700px; left: 25px; top: 34px; background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 4px;"> -->
     <!-- <div class="card"> -->
@@ -285,6 +312,7 @@
 <script>
 import CountryService from "../service/CountryService";
 import NodeService from "../service/NodeService";
+
 export default {
   data() {
     return {
