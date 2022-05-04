@@ -13,7 +13,6 @@
       border-radius: 4px;
     "
   >
-
     <span
       class="p-float-label"
       style="
@@ -39,56 +38,76 @@
     >
       Mapeamento de processos, dados e registro de atividades</span
     >
-    <span
-      class="p-float-label"
-      style="
-        width: 850px;
-        height: 40px;
-        left: 15px;
-        padding-top: 10px;
-        background: #AF2;
-      "
-    >
-    </span>
+    <div>
+      <span
+        class="p-float-label"
+        style="
+          width: 850px;
+          height: 40px;
+          left: 15px;
+          padding-top: 10px;
+          background: #af2;
+        "
+      >
+        <span class="p-input-icon-right">
+          <InputText type="text" v-model="value2" placeholder="Buscar"/>
+          <i class="pi pi-search" />
+        </span>
+      </span>
+    </div>
     <span
       class="p-float-label"
       style="
         width: 100%;
         padding: 10px;
         height: 400px;
-        
+
         padding-top: 10px;
         background: #aba;
       "
     >
-
-	<div>
-        <DataTable :value="products" responsiveLayout="scroll" style="">
-            <Column field="id" header="ID"></Column>
-            <Column field="name" header="Nome"></Column>
-            <Column field="descricao" header="Descrição"></Column>
-            <Column field="area" header="Área"></Column>
-			<Column field="grupo" header="Grupo"></Column>
-			<Column field="unidade" header="Unidade"></Column>
-			<Column field="acoes" header="Ações"></Column>
+      <div>
+        <DataTable
+          :value="customers"
+          :paginator="true"
+          :rows="10"
+          paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
+          :rowsPerPageOptions="[10, 20, 50]"
+          responsiveLayout="scroll"
+          currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
+        >
+          <Column field="id" header="ID"></Column>
+          <Column field="name" header="Nome"></Column>
+          <Column field="descricao" header="Descrição"></Column>
+          <Column field="area" header="Área"></Column>
+          <Column field="grupo" header="Grupo"></Column>
+          <Column field="unidade" header="Unidade"></Column>
+          <Column field="acoes" header="Ações"></Column>
+          <template #paginatorstart>
+            <Button type="button" icon="pi pi-refresh" class="p-button-text" />
+          </template>
+          <template #paginatorend>
+            <Button type="button" icon="pi pi-cloud" class="p-button-text" />
+          </template>
         </DataTable>
-    </div>
-	
+      </div>
     </span>
 
-	<div
-      style="
-        width: 850px;
-        height: 40px;
-		position: right;
-        left: 15px;
-        padding-top: 70px;
-        background: #AF2;
-      "
-    >
+    <div style="width: 100%; height: 40px; padding: 30px; background: #ace">
+      <span>
+        <Button
+          label="Novo Mapeamento"
+          style="
+            position: absolute;
+            width: 220px;
+            height: 32px;
+            left: 1092px;
+            padding-right: 29px;
+            top: 643px;
+          "
+        />
+      </span>
     </div>
-
-	
 
     <!-- <div style="position: center; width: 1316px; height: 700px; left: 25px; top: 34px; background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 4px;"> -->
     <!-- <div class="card"> -->
