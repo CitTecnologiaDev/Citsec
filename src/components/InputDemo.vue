@@ -38,64 +38,55 @@
     >
       Mapeamento de processos, dados e registro de atividades</span
     >
-    <div>
-      <span
-        class="p-float-label"
-        style="
-          width: 850px;
-          height: 40px;
-          left: 15px;
-          padding-top: 10px;
-          <!-- background: #af2; -->
-        "
-      >
-        <span class="p-input-icon-right">
-          <InputText type="text" v-model="value2" placeholder="Buscar" style="width: 313px;
-height: 33px;
-left: 54px;
-top: 153px;
-"/>
-          <i class="pi pi-search" />
-        </span>
-      </span>
-    </div>
-    <span
-      class="p-float-label"
+    <div
       style="
+        display: inline-block;
         width: 100%;
+        height: 70px;
+        left: 15px;
         padding: 10px;
-        height: 400px;
-
-        padding-top: 10px;
-        <!-- background: #aba; -->
+        padding-bottom: 10px;
+        background: #af2;
       "
     >
-      <div>
-        <DataTable
-          :value="customers"
-          :paginator="true"
-          :rows="10"
-          paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
-          :rowsPerPageOptions="[10, 20, 50]"
-          responsiveLayout="scroll"
-          currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
-        >
-          <Column field="id" header="ID"></Column>
-          <Column field="name" header="Nome"></Column>
-          <Column field="descricao" header="Descrição"></Column>
-          <Column field="area" header="Área"></Column>
-          <Column field="grupo" header="Grupo"></Column>
-          <Column field="unidade" header="Unidade"></Column>
-          <Column field="acoes" header="Ações"></Column>
-          <template #paginatorstart>
-            <Button type="button" icon="pi pi-refresh" class="p-button-text" />
-          </template>
-          <template #paginatorend>
-            <Button type="button" icon="pi pi-cloud" class="p-button-text" />
-          </template>
+      <span class="p-input-icon-right">
+        <InputText
+          type="text"
+          v-model="value2"
+          placeholder="Buscar"
+          style="width: 313px; height: 33px; left: 54px; top: 5px"
+        />
+        <i class="pi pi-search" />
+      </span>
+
+      <span style="padding-left: 16px">
+        <Dropdown
+          v-model="selectArea"
+          :options="areas"
+          optionLabel="name"
+          placeholder="Áreas"
+          style="width: 313px; height: 33px; left: 16px; top: 5px"
+        />
+      </span>
+    </div>
+    <div style="width: 100%; padding: 10px; height: 400px; background: #aba">
+      <div class="card">
+        <DataTable :value="products" removableSort responsiveLayout="scroll">
+          <Column field="id" header="ID" :sortable="true"></Column>
+          <Column field="name" header="Nome" :sortable="true"></Column>
+          <Column
+            field="descricao"
+            header="Descrição"
+            :sortable="true"
+          ></Column>
+          <Column field="area" header="Área" :sortable="true"></Column>
+          <Column field="grupo" header="Grupo" :sortable="true"></Column>
+          <Column field="unidade" header="Unidade" :sortable="true"></Column>
+          <Column field="acoes" header="Ações" :sortable="true"></Column>
         </DataTable>
       </div>
-    </span>
+    </div>
+  
 
     <div style="width: 100%; height: 40px; padding: 30px; background: #ace">
       <span>
@@ -113,223 +104,6 @@ top: 153px;
       </span>
     </div>
 
-    <!-- <div style="position: center; width: 1316px; height: 700px; left: 25px; top: 34px; background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 4px;"> -->
-    <!-- <div class="card"> -->
-    <!-- <h5>InputText</h5>
-				<div class="grid formgrid">
-					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
-						<InputText type="text" placeholder="Default"></InputText>
-					</div>
-					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
-						<InputText type="text" placeholder="Disabled" :disabled="true"></InputText>
-					</div>
-					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
-						<InputText type="text" placeholder="Invalid" class="p-invalid" />
-					</div>
-				</div>  -->
-
-    <!-- <h5>Icons</h5>
-				<div class="grid formgrid">
-					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
-						<span class="p-input-icon-left">
-							<i class="pi pi-user" />
-							<InputText type="text" placeholder="Username" />
-						</span>
-					</div>
-					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
-						<span class="p-input-icon-right">
-							<InputText type="text" placeholder="Search" />
-							<i class="pi pi-search" />
-						</span>
-					</div>
-					<div class="col-12 mb-2 lg:col-4 lg:mb-0">
-						<span class="p-input-icon-left p-input-icon-right">
-							<i class="pi pi-user" />
-							<InputText type="text" placeholder="Search" />
-							<i class="pi pi-search" />
-						</span>
-					</div>
-				</div> -->
-
-    <!-- <h5>Float Label</h5>
-				<span class="p-float-label">
-					<InputText id="username" type="text" v-model="floatValue"/>
-					<label for="username">Username</label>
-				</span> -->
-
-    <!-- <h5>Textarea</h5>
-				<Textarea placeholder="Your Message" :autoResize="true" rows="3" cols="30" />
-
-				<h5>AutoComplete</h5>
-				<AutoComplete placeholder="Search" id="dd" :dropdown="true" :multiple="true" v-model="selectedAutoValue" :suggestions="autoFilteredValue" @complete="searchCountry($event)" field="name"/>
-
-				<h5>Calendar</h5>
-				<Calendar :showIcon="true" :showButtonBar="true" v-model="calendarValue"></Calendar>
-
-				<h5>Spinner</h5>
-				<InputNumber v-model="inputNumberValue" showButtons mode="decimal"></InputNumber>
-
-				<h5>Chips</h5>
-				<Chips v-model="chipsValue"/> -->
-    <!-- </div> -->
-
-    <!-- <div class="card">
-				<div class="grid">
-					<div class="col-12">
-						<h5>Slider</h5>
-						<InputText v-model.number="sliderValue" />
-						<Slider v-model="sliderValue" />
-					</div>
-					<div class="col-12 md:col-6">
-						<h5>Rating</h5>
-						<Rating v-model="ratingValue"/>
-					</div>
-					<div class="col-12 md:col-6">
-						<h5>ColorPicker</h5>
-						<ColorPicker style="width: 2rem" v-model="colorValue" />
-					</div>
-					<div class="col-12">
-						<h5>Knob</h5>
-						<Knob v-model="knobValue" :step="10" :min="-50" :max="50" valueTemplate="{value}%" />
-					</div>
-				</div>
-			</div> -->
-
-    <!-- </div> -->
-
-    <!-- <div class="col-12 md:col-6">
-			<div class="card">
-				<h5>RadioButton</h5>
-				<div class="grid">
-					<div class="col-12 md:col-4">
-						<div class="field-radiobutton mb-0">
-							<RadioButton id="option1" name="option" value="Chicago" v-model="radioValue" />
-							<label for="option1">Chicago</label>
-						</div>
-					</div>
-					<div class="col-12 md:col-4">
-						<div class="field-radiobutton mb-0">
-							<RadioButton id="option2" name="option" value="Los Angeles" v-model="radioValue" />
-							<label for="option2">Los Angeles</label>
-						</div>
-					</div>
-					<div class="col-12 md:col-4">
-						<div class="field-radiobutton mb-0">
-							<RadioButton id="option3" name="option" value="New York" v-model="radioValue" />
-							<label for="option3">New York</label>
-						</div>
-					</div>
-				</div>
-
-				<h5>Checkbox</h5>
-				<div class="grid">
-					<div class="col-12 md:col-4">
-						<div class="field-checkbox mb-0">
-							<Checkbox id="checkOption1" name="option" value="Chicago" v-model="checkboxValue" />
-							<label for="checkOption1">Chicago</label>
-						</div>
-					</div>
-					<div class="col-12 md:col-4">
-						<div class="field-checkbox mb-0">
-							<Checkbox id="checkOption2" name="option" value="Los Angeles" v-model="checkboxValue" />
-							<label for="checkOption2">Los Angeles</label>
-						</div>
-					</div>
-					<div class="col-12 md:col-4">
-						<div class="field-checkbox mb-0">
-							<Checkbox id="checkOption3" name="option" value="New York" v-model="checkboxValue" />
-							<label for="checkOption3">New York</label>
-						</div>
-					</div>
-				</div>
-
-				<h5>Input Switch</h5>
-				<InputSwitch v-model="switchValue" />
-			</div>
-
-			<div class="card">
-				<h5>Listbox</h5>
-				<Listbox v-model="listboxValue" :options="listboxValues" optionLabel="name" :filter="true"/>
-
-				<h5>Dropdown</h5>
-				<Dropdown v-model="dropdownValue" :options="dropdownValues" optionLabel="name" placeholder="Select" />
-
-				<h5>MultiSelect</h5>
-				<MultiSelect v-model="multiselectValue" :options="multiselectValues" optionLabel="name" placeholder="Select Countries" :filter="true">
-					<template #value="slotProps">
-						<div class="inline-flex align-items-center py-1 px-2 bg-primary text-primary border-round mr-2" v-for="option of slotProps.value" :key="option.code">
-							<span :class="'mr-2 flag flag-' + option.code.toLowerCase()" style="width:18px; height: 12px"/>
-							<div>{{option.name}}</div>
-						</div>
-						<template v-if="!slotProps.value || slotProps.value.length === 0">
-							<div class="p-1">Select Countries</div>
-						</template>
-					</template>
-					<template #option="slotProps">
-						<div class="flex align-items-center">
-							<span :class="'mr-2 flag flag-' + slotProps.option.code.toLowerCase()" style="width:18px; height: 12px"/>
-							<div>{{slotProps.option.name}}</div>
-						</div>
-					</template>
-				</MultiSelect>
-
-				<h5>TreeSelect</h5>
-				<TreeSelect v-model="selectedNode" :options="treeSelectNodes" placeholder="Select Item"></TreeSelect>
-			</div>
-
-			<div class="card">
-				<h5>ToggleButton</h5>
-				<ToggleButton v-model="toggleValue" onLabel="Yes" offLabel="No" :style="{width: '10em'}"/>
-
-				<h5>SelectButton</h5>
-				<SelectButton v-model="selectButtonValue1" :options="selectButtonValues1" optionLabel="name" />
-
-				<h5>SelectButton - Multiple</h5>
-				<SelectButton v-model="selectButtonValue2" :options="selectButtonValues2" optionLabel="name" :multiple="true"/>
-			</div>
-		</div>
-
-		<div class="col-12">
-			<div class="card">
-				<h5>Input Groups</h5>
-				<div class="grid p-fluid">
-					<div class="col-12 md:col-6">
-						<div class="p-inputgroup">
-							<span class="p-inputgroup-addon">
-								<i class="pi pi-user"></i>
-							</span>
-							<InputText placeholder="Username"/>
-						</div>
-					</div>
-
-					<div class="col-12 md:col-6">
-						<div class="p-inputgroup">
-							<span class="p-inputgroup-addon"><i class="pi pi-shopping-cart"></i></span>
-							<span class="p-inputgroup-addon"><i class="pi pi-globe"></i></span>
-							<InputText placeholder="Price"/>
-							<span class="p-inputgroup-addon">$</span>
-							<span class="p-inputgroup-addon">.00</span>
-						</div>
-					</div>
-
-					<div class="col-12 md:col-6">
-						<div class="p-inputgroup">
-							<Button label="Search"/>
-							<InputText placeholder="Keyword"/>
-						</div>
-					</div>
-
-					<div class="col-12 md:col-6">
-						<div class="p-inputgroup">
-							<span class="p-inputgroup-addon p-inputgroup-addon-checkbox">
-								<Checkbox v-model="inputGroupValue" :binary="true"/>
-							</span>
-							<InputText placeholder="Confirm"/>
-						</div>
-					</div> -->
-    <!-- </div>  -->
-    <!-- </div> -->
-    <!-- </div> -->
   </div>
 </template>
 <script>
@@ -339,6 +113,14 @@ import NodeService from "../service/NodeService";
 export default {
   data() {
     return {
+      selectArea: null,
+      areas: [
+        { name: "New York", code: "NY" },
+        { name: "Rome", code: "RM" },
+        { name: "London", code: "LDN" },
+        { name: "Istanbul", code: "IST" },
+        { name: "Paris", code: "PRS" },
+      ],
       floatValue: null,
       autoValue: null,
       selectedAutoValue: null,
