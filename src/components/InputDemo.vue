@@ -7,7 +7,7 @@
       height: 700px;
       left: 25px;
       top: 34px;
-      padding-top: 20px;
+      padding-top: 20px
       <!-- background: #c4b; -->
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
@@ -23,7 +23,12 @@
         <!-- background: #f32; -->
       "
     >
-      Home / Page 01 / Page 02 / Page 03</span
+    <p style="font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 17px;"> Home / Page 01 / Page 02 / Page 03</p>
+     </span
     >
 
     <span
@@ -33,10 +38,17 @@
         height: 40px;
         left: 15px;
         padding-top: 10px;
+        
+        
         <!-- background: #bc3; -->
       "
     >
-      Mapeamento de processos, dados e registro de atividades</span
+    <p style="font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px; padding-top: 10px; color: #1B242C"> Mapeamento de processos, dados e registro de atividades</p>
+     </span
     >
     <div
       style="
@@ -45,8 +57,7 @@
         height: 70px;
         left: 15px;
         padding: 10px;
-        padding-bottom: 10px;
-        background: #af2;
+        <!-- background: #af2; -->
       "
     >
       <span class="p-input-icon-right">
@@ -59,7 +70,7 @@
         <i class="pi pi-search" />
       </span>
 
-      <span style="padding-left: 16px">
+      <span>
         <Dropdown
           v-model="selectArea"
           :options="areas"
@@ -68,8 +79,54 @@
           style="width: 313px; height: 33px; left: 16px; top: 5px"
         />
       </span>
+
+       <span style="padding-left: 20px">
+        <Dropdown
+          v-model="selectArea"
+          :options="areas"
+          optionLabel="name"
+          placeholder="Grupos"
+          style="width: 313px; height: 33px; left: 16px; top: 5px;"
+        />
+      </span>
     </div>
-    <div style="width: 100%; padding: 10px; height: 400px; background: #aba">
+
+     <div
+      style="
+        display: inline-block;
+        width: 100%;
+        height: 70px;
+        left: 15px;
+        padding-top: 0px;
+        padding-left: 10px;
+        <!-- background: #abc; -->
+      "
+    >
+<span>
+        <Dropdown
+          v-model="selectArea"
+          :options="areas"
+          optionLabel="name"
+          placeholder="Unidades"
+          style="width: 313px; height: 33px; top: 5px"
+        />
+      </span>
+
+       <span style="padding-left: 15px">
+        <Dropdown
+          v-model="selectArea"
+          :options="areas"
+          optionLabel="name"
+          placeholder="Situação"
+          style="width: 313px; height: 33px; top: 5px;"
+        />
+      </span>
+
+      <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: #3783c6; padding-left: 20px">Limpar filtros</a>
+
+    </div>
+
+    <div style="width: 100%; padding: 10px; height: 400px;">
       <div class="card">
         <DataTable :value="products" removableSort responsiveLayout="scroll">
           <Column field="id" header="ID" :sortable="true"></Column>
@@ -88,17 +145,14 @@
     </div>
   
 
-    <div style="width: 100%; height: 40px; padding: 30px; background: #ace">
+    <div style="width: 100%; height: 100px; padding: 30px;">
       <span>
         <Button
           label="Novo Mapeamento"
-          style="
-            position: absolute;
+          style="float: right;
             width: 220px;
             height: 32px;
-            left: 1092px;
             padding-right: 29px;
-            top: 643px;
           "
         />
       </span>
