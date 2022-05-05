@@ -8,7 +8,7 @@
       left: 25px;
       top: 34px;
       padding-top: 20px;
-      background: #c4b;
+      <!-- background: #c4b; -->
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
     "
@@ -20,7 +20,7 @@
         height: 33px;
         left: 15px;
         padding-top: 20px;
-        background: #f32;
+        <!-- background: #f32; -->
       "
     >
       Home / Page 01 / Page 02 / Page 03</span
@@ -33,7 +33,7 @@
         height: 40px;
         left: 15px;
         padding-top: 10px;
-        background: #bc3;
+        <!-- background: #bc3; -->
       "
     >
       Mapeamento de processos, dados e registro de atividades</span
@@ -46,11 +46,15 @@
           height: 40px;
           left: 15px;
           padding-top: 10px;
-          background: #af2;
+          <!-- background: #af2; -->
         "
       >
         <span class="p-input-icon-right">
-          <InputText type="text" v-model="value2" placeholder="Buscar"/>
+          <InputText type="text" v-model="value2" placeholder="Buscar" style="width: 313px;
+height: 33px;
+left: 54px;
+top: 153px;
+"/>
           <i class="pi pi-search" />
         </span>
       </span>
@@ -63,7 +67,7 @@
         height: 400px;
 
         padding-top: 10px;
-        background: #aba;
+        <!-- background: #aba; -->
       "
     >
       <div>
