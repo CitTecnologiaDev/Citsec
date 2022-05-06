@@ -4,13 +4,13 @@
     style="
       position: center;
       width: 100%;
-      height: 700px;
+      height: 730px;
       left: 25px;
       top: 34px;
-      padding-top: 20px
-      <!-- background: #c4b; -->
+      padding-top: 20px;
+      background: #FFFF;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 4px;
+      border-radius: 6px;
     "
   >
     <span
@@ -23,7 +23,7 @@
         <!-- background: #f32; -->
       "
     >
-    <p style="font-family: 'Montserrat';
+    <p style="font-family: 'Arial';
 font-style: normal;
 font-weight: 500;
 font-size: 15px;
@@ -43,10 +43,10 @@ line-height: 17px;"> Home / Page 01 / Page 02 / Page 03</p>
         <!-- background: #bc3; -->
       "
     >
-    <p style="font-family: 'Montserrat';
+    <p style="font-family: 'Arial';
 font-style: normal;
 font-weight: 400;
-font-size: 20px;
+font-size: 16px;
 line-height: 22px; padding-top: 10px; color: #1B242C"> Mapeamento de processos, dados e registro de atividades</p>
      </span
     >
