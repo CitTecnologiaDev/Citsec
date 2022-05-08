@@ -63,9 +63,9 @@ export default {
 						// {label: 'Misc', icon: 'pi pi-fw pi-circle-off', to: '/misc'},
 
                         {label: 'Treinamento', to: '/list'},
-                        {label: 'Questionários', to: '/input'},
+                        {label: 'Questionários'},
                         {label: 'Gaps'},
-                        {label: 'Mapeamento'},
+                        {label: 'Mapeamento', to: '/input'},
                         {label: 'Plano de ação'},
                         {label: 'Gestão de riscos'},
                         {label: 'Relatórios'},
