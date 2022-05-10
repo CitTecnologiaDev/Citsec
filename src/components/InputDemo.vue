@@ -8,11 +8,15 @@
       left: 25px;
       top: 34px;
       padding-top: 20px;
-      background: #FFFF;
+      background: #ffff;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 6px;
     "
   >
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100"
+      rel="stylesheet"
+    />
     <span
       class="p-float-label"
       style="
@@ -23,13 +27,18 @@
         <!-- background: #f32; -->
       "
     >
-    <p style="font-family: 'Arial';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 17px;"> Home / Page 01 / Page 02 / Page 03</p>
-     </span
-    >
+      <p
+        style="
+          font-family: 'Montserrat', sans-serif;
+          color: #000000;
+          font-weight: 1000;
+          font-size: 15px;
+          line-height: 17px;
+        "
+      >
+        Home / Page 01 / Page 02 / Page 03
+      </p>
+    </span>
 
     <span
       class="p-float-label"
@@ -43,13 +52,19 @@ line-height: 17px;"> Home / Page 01 / Page 02 / Page 03</p>
         <!-- background: #bc3; -->
       "
     >
-    <p style="font-family: 'Arial';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 22px; padding-top: 10px; color: #1B242C"> Mapeamento de processos, dados e registro de atividades</p>
-     </span
-    >
+      <p
+        style="
+          font-family: 'Montserrat', sans-serif;
+          color: #000000;
+          font-weight: 1000;
+          font-size: 16px;
+          line-height: 22px;
+          padding-top: 10px;
+        "
+      >
+        Mapeamento de processos, dados e registro de atividades
+      </p>
+    </span>
     <div
       style="
         display: inline-block;
@@ -80,18 +95,18 @@ line-height: 22px; padding-top: 10px; color: #1B242C"> Mapeamento de processos, 
         />
       </span>
 
-       <span style="padding-left: 20px">
+      <span style="padding-left: 20px">
         <Dropdown
-          v-model="selectArea"
-          :options="areas"
+          v-model="selectGrupo"
+          :options="grupos"
           optionLabel="name"
           placeholder="Grupos"
-          style="width: 313px; height: 33px; left: 16px; top: 5px;"
+          style="width: 313px; height: 33px; left: 16px; top: 5px"
         />
       </span>
     </div>
 
-     <div
+    <div
       style="
         display: inline-block;
         width: 100%;
@@ -102,79 +117,96 @@ line-height: 22px; padding-top: 10px; color: #1B242C"> Mapeamento de processos, 
         <!-- background: #abc; -->
       "
     >
-<span>
+      <span>
         <Dropdown
-          v-model="selectArea"
-          :options="areas"
+          v-model="selectUnidade"
+          :options="unidades"
           optionLabel="name"
           placeholder="Unidades"
           style="width: 313px; height: 33px; top: 5px"
         />
       </span>
 
-       <span style="padding-left: 15px">
+      <span style="padding-left: 15px">
         <Dropdown
-          v-model="selectArea"
-          :options="areas"
+          v-model="selectSituacao"
+          :options="situacoes"
           optionLabel="name"
           placeholder="Situação"
-          style="width: 313px; height: 33px; top: 5px;"
+          style="width: 313px; height: 33px; top: 5px"
         />
       </span>
 
-      <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: #3783c6; padding-left: 20px">Limpar filtros</a>
-
+      <a
+        class="font-medium no-underline ml-2 text-right cursor-pointer"
+        style="color: #3783c6; padding-left: 20px"
+        >Limpar filtros</a
+      >
     </div>
 
-    <div style="width: 100%; padding: 10px; height: 400px;">
+    <div style="width: 100%; padding: 10px; height: 400px">
       <div class="card">
-        <DataTable :value="products" removableSort responsiveLayout="scroll">
+        <DataTable :value="processes" removableSort responsiveLayout="scroll">
           <Column field="id" header="ID" :sortable="true"></Column>
           <Column field="name" header="Nome" :sortable="true"></Column>
           <Column
-            field="descricao"
+            field="description"
             header="Descrição"
             :sortable="true"
           ></Column>
           <Column field="area" header="Área" :sortable="true"></Column>
-          <Column field="grupo" header="Grupo" :sortable="true"></Column>
-          <Column field="unidade" header="Unidade" :sortable="true"></Column>
-          <Column field="acoes" header="Ações" :sortable="true"></Column>
+          <Column field="group" header="Grupo" :sortable="true"></Column>
+          <Column field="unity" header="Unidade" :sortable="true"></Column>
+          <Column field="action" header="Ações" :sortable="true"></Column>
         </DataTable>
       </div>
     </div>
-  
 
-    <div style="width: 100%; height: 100px; padding: 30px;">
+    <div style="width: 100%; height: 100px; padding: 30px">
       <span>
         <Button
           label="Novo Mapeamento"
-          style="float: right;
-            width: 220px;
-            height: 32px;
-            padding-right: 29px;
-          "
+          style="float: right; width: 220px; height: 32px; padding-right: 29px"
         />
       </span>
     </div>
-
   </div>
 </template>
 <script>
 import CountryService from "../service/CountryService";
 import NodeService from "../service/NodeService";
+import ProcessService from "../service/ProcessService";
 
 export default {
   data() {
     return {
-      selectArea: null,
       areas: [
-        { name: "New York", code: "NY" },
-        { name: "Rome", code: "RM" },
-        { name: "London", code: "LDN" },
-        { name: "Istanbul", code: "IST" },
-        { name: "Paris", code: "PRS" },
+        { name: "Financeiro", code: "FN" },
+        { name: "Administrativo", code: "ADM" },
+        { name: "Jurídico", code: "JD" },
+        { name: "Marketing", code: "MKT" },
+        { name: "Informática", code: "TI" },
+        { name: "Departamento Pessoal", code: "RH" },
+        { name: "Setor Fiscal", code: "SF" },
       ],
+      grupos: [
+        { name: "Dados sensíveis", code: "DS" },
+        { name: "Dados públicos", code: "PD" },
+        { name: "Dados anonimizados", code: "DA" },
+      ],
+      unidades: [
+        { name: "Matriz", code: "MAT" },
+        { name: "Filial 1", code: "F1" },
+        { name: "Filial 2", code: "F2" },
+      ],
+      situacoes: [
+        { name: "GAPs identificados", code: "GI" },
+        { name: "GAPs não identificados", code: "GN" },
+      ],
+      selectSituacao: null,
+      selectUnidade: null,
+      selectGrupo: null,
+      selectArea: null,
       floatValue: null,
       autoValue: null,
       selectedAutoValue: null,
@@ -188,6 +220,7 @@ export default {
       radioValue: null,
       checkboxValue: [],
       switchValue: false,
+      processes: null,
       listboxValues: [
         { name: "New York", code: "NY" },
         { name: "Rome", code: "RM" },
@@ -236,17 +269,20 @@ export default {
       selectedNode: null,
     };
   },
+  processService: null,
   countryService: null,
   nodeService: null,
   created() {
     this.countryService = new CountryService();
     this.nodeService = new NodeService();
+    this.processService = new ProcessService();
   },
   mounted() {
     this.countryService.getCountries().then((data) => (this.autoValue = data));
     this.nodeService
       .getTreeNodes()
       .then((data) => (this.treeSelectNodes = data));
+    this.processService.getProcessSmall().then((data) => (this.process = data));
   },
   methods: {
     searchCountry(event) {

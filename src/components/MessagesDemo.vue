@@ -1,63 +1,76 @@
 <template>
-	<div class="grid">
-		<div class="col-12 lg:col-6">
-			<div class="card">
-				<h5>Toast</h5>
+	<div
+    style="
+      position: center;
+      width: 100%;
+      height: 730px;
+      left: 25px;
+      top: 34px;
+      padding-top: 20px;
+      background: #ffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+    "
+  >
 
-				<Toast />
-				<Button @click="showSuccess()" label="Success" class="p-button-success mr-2" />
-				<Button @click="showInfo()" label="Info" class="p-button-info mr-2" />
-				<Button @click="showWarn()" label="Warn" class="p-button-warning mr-2" />
-				<Button @click="showError()" label="Error" class="p-button-danger mr-2" />
-			</div>
-		</div>
+  <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100"
+      rel="stylesheet"
+/>
+<div style="width: 99%">
 
-		<div class="col-12 lg:col-6">
-			<div class="card">
-				<h5>Messages</h5>
+<div>
+	<!-- <div style="display: inline-block;"><img alt="pessoa" src="images/lgpd/balanca.png" style="width: 200px; height: 200px"></div> -->
+	<b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px">Quem é o titular de dados pessoais?</b>
+	<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">É a pessoa natural a quem se referem os dados pessoais que são objeto de tratamento.</p>
+</div>
 
-				<Button label="Success" @click="addMessage('success')" class="p-button-success mr-2"/>
-				<Button label="Info" @click="addMessage('info')" class="p-button-info mr-2"/>
-				<Button label="Warn" @click="addMessage('warn')" class="p-button-warning mr-2"/>
-				<Button label="Error" @click="addMessage('error')" class="p-button-danger mr-2"/>
+<div style="padding-top: 10px">
+	<b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px">O que é a Autoridade Nacional de Proteção de Dados (ANPD)?</b>
+	<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">A ANPD é o “órgão da administração pública responsável por zelar, implementar e fiscalizar o cumprimento da LGPD em todo o território nacional”.</p>
+</div>
 
-				<transition-group name="p-message" tag="div">
-					<Message v-for="msg of message" :severity="msg.severity" :key="msg.content">{{msg.content}}</Message>
-				</transition-group>
-			</div>
-		</div>
+<div style="padding-top: 10px">
+	<b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px">Quais as obrigações e os direitos?</b>
+	<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">Respeito com os titulares dos dados: as pessoas. A instituições devem ter cuidado desde a coleta até o descarte, oferecendo o máximo de transparência e de segurança. As pessoas terão direito a receber informações explícitas, legítimas e específicas sobre como os dados serão tratados. Os indivíduos poderão consultar, de forma fácil e gratuita, como seus dados estão sendo tratados. 
+		E, a qualquer momento, elas podem revogar o consentimento e exigir a eliminação dos dados.</p>
+</div>
 
-		<div class="col-12 lg:col-8">
-			<div class="card">
-				<h5>Inline</h5>
-				<div class="field grid">
-					<label for="username1" class="col-fixed w-9rem">Username</label>
-					<div class="col">
-						<InputText id="username1" v-model="username" :required="true" class="p-invalid mr-2"></InputText>
-						<InlineMessage>Username is required</InlineMessage>
-					</div>
-				</div>
-				<div class="field grid">
-					<label for="email" class="col-fixed w-9rem">Email</label>
-					<div class="col">
-						<InputText id="email" v-model="email" :required="true" class="p-invalid mr-2"></InputText>
-						<InlineMessage/>
-					</div>
-				</div>
-			</div>
-		</div>
+<div style="padding-top: 10px">
+	<b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px">O que é tratamento de dados pessoais?</b>
+	<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">A LGPD define tratamento de dados pessoais e toda operação realizada com dados pessoais, como as que se referem a coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, 
+		avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração.</p>
+</div>
 
-		<div class="col-12 lg:col-4">
-			<div class="card">
-				<h5>Help Text</h5>
-				<div class="field p-fluid">
-					<label for="username2">Username</label>
-					<InputText id="username2" type="username" class="p-error" aria-describedby="username-help" />
-					<small id="username-help" class="p-error">Enter your username to reset your password.</small>
-				</div>
-			</div>
-		</div>
-	</div>
+<div style="padding-top: 10px">
+	<b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px; padding-top: 1000px">Quem são os agentes de tratamento de dados previstos na LGPD?</b>
+	<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">O controlador: pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais. O operador: pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de 
+		dados pessoais em nome do controlador.</p>
+</div>
+
+<div style="padding-top: 10px">
+	<b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px; padding-top: 1000px">Quem é o encarregado de dados pessoais ou DPO (Data Protection Officer)?</b>
+	<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">É a pessoa (física ou jurídica) indicada pelo controlador e operador para atuar como canal de comunicação entre o controlador, os titulares dos dados e a ANPD.</p>
+</div>
+
+<div style="padding-top: 10px">
+	<b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px; padding-top: 1000px">Quais as sanções previstas, em caso de descumprimento?</b>
+	<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">Multa de até R$ 50 milhões. A suspensão, ou proibição, “do exercício de atividades relacionadas a tratamento de dados”.</p>
+</div>
+
+
+<div style="padding-top: 10px">
+	<b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px; padding-top: 1000px">Existem exceções?</b>
+	<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">A LGPD não se aplica ao tratamento de dados realizado por pessoas para fins exclusivamente particulares e não econômicos, ou para fins jornalístico e artístico; acadêmicos; de segurança pública; 
+		defesa nacional ou segurança de Estado; de investigações e repressão de crimes; ou provenientes de fora do país.</p>
+</div>
+
+</div>
+
+</div>
+
+
+
 </template>
 
 <script>

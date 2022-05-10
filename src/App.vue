@@ -74,6 +74,7 @@ export default {
                         {label: 'Canal do DPO'},
                         {label: 'Empresa'},
                         {label: 'Suporte'},
+                        {label: 'FAQ', to: '/messages'},
                         {label: 'Sair', to: '/login'},
 
 					]
