@@ -1,12 +1,11 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import App from './App.vue';
-import Login from "@/pages/Login";
 
 const routes = [
     {
-        path:'/',
+        path: '/',
         name:'login_page',
-        component: Login
+        component: () => import('@/pages/Login')
     },
     {
         path: '/app',
@@ -14,15 +13,10 @@ const routes = [
         component: App,
         children: [
             {
-                path: '',
+                path: '/dashboard',
                 name: 'dashboard',
                 component: () => import('./components/Dashboard.vue')
-            }, 
-            // {
-            //     path: '/dashboard',
-            //     name: 'dashboard',
-            //     component: () => import('./components/Dashboard.vue')
-            // },
+            },
             {
                 path: '/formlayout',
                 name: 'formlayout',
