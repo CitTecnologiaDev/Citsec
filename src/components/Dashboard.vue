@@ -173,7 +173,7 @@
 			</ul>	
 		</div>
 		<div class="card  flex flex-column align-items-center">
-				<h5 class="align-self-start">Maturidade de riscos por setor</h5>
+				<h5 class="align-self-start">Mapa de riscos por setor</h5>
 				<Chart type="polarArea" :data="polarData" :options="polarOptions" style="width: 50%" />
 		</div>
 	</div>

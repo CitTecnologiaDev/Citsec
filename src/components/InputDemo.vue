@@ -193,6 +193,7 @@ export default {
         { name: "Dados sensíveis", code: "DS" },
         { name: "Dados públicos", code: "PD" },
         { name: "Dados anonimizados", code: "DA" },
+        { name: "Dados pessoais", code: "DP" },
       ],
       unidades: [
         { name: "Matriz", code: "MAT" },
@@ -202,6 +203,7 @@ export default {
       situacoes: [
         { name: "GAPs identificados", code: "GI" },
         { name: "GAPs não identificados", code: "GN" },
+        { name: "GAPs corrigidos", code: "GC" },
       ],
       selectSituacao: null,
       selectUnidade: null,
