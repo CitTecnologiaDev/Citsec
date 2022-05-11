@@ -16,14 +16,27 @@
       border-radius: 6px;
     "
   >
-
+  
   <link
       href="https://fonts.googleapis.com/css?family=Montserrat:100"
       rel="stylesheet"
 />
 <div style="width: 100%">
 
-<div>
+	<p
+        style="
+          font-family: 'Montserrat', sans-serif;
+          color: #000000;
+          font-weight: 1000;
+          font-size: 25px;
+          line-height: 17px;
+		  padding-left: 15px;
+        "
+      >
+        Perguntas frequentes (FAQ)
+      </p>
+
+<div style="padding-top: 10px">
 	<Panel header="Quem é o titular de dados pessoais?" :toggleable="true" style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px; padding-right: 15px">
 	<!-- <b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px">Quem é o titular de dados pessoais?</b> -->
 		<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">É a pessoa natural a quem se referem os dados pessoais que são objeto de tratamento.</p>
