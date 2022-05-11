@@ -45,6 +45,7 @@
 
 <script>
 export default {
+    name:'login_page',
     data() {
         return {
             email: '',
