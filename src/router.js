@@ -1,9 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import App from './App.vue';
+import Login from "@/pages/Login";
 
 const routes = [
     {
-        path: '/',
+        path:'/',
+        name:'login_page',
+        component: Login
+    },
+    {
+        path: '/app',
         name: 'app',
         component: App,
         children: [
@@ -150,11 +156,6 @@ const routes = [
                 component: () => import('./components/IconsDemo.vue')
             }
         ]
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: () => import('./pages/Login.vue')
     },
     {
         path: '/landing',
