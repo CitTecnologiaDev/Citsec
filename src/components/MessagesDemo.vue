@@ -37,11 +37,13 @@
       </p>
 
 <div style="padding-top: 10px">
+	
+	<!-- <div style="box-sizing: border-box;"><img alt="balanca" src="images/lgpd/balanca.png" style="width: 400px; height: 400px"></div> -->
+
 	<Panel header="Quem é o titular de dados pessoais?" :toggleable="true" style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px; padding-right: 15px">
 	<!-- <b style="font-size: 20px; font-family: 'Montserrat', sans-serif; padding-left: 15px">Quem é o titular de dados pessoais?</b> -->
 		<p style="font-size: 15px; font-family: 'Montserrat', sans-serif; padding-left: 30px; padding-top: 5px; font-weight: 800;">É a pessoa natural a quem se referem os dados pessoais que são objeto de tratamento.</p>
 	</Panel>
-	<!-- <div style="box-sizing: border-box;"><img alt="pessoa" src="images/lgpd/balanca.png" style="width: 40px; height: 40px"></div> -->
 	
 </div>
 

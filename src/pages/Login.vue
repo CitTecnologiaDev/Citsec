@@ -33,9 +33,10 @@
                         <!-- <Button label="Entrar" class="p-3 text-xl"></button> -->
                     </div>
                     <div style="text-align: center; justifyContent: center; display: flex;">
-                        <a href="/dashboard">
+                        <!-- <a href="/dashboard">
                             <Button label="Entrar" class="p-3 text-xl" style="width: 250px"></button>
-                        </a>
+                        </a> -->
+                        <Button label="Entrar" class="p-3 text-xl" style="width: 250px" @click="$router.push('app/dashboard')"></button>
                     </div>
                 </div>
             </div>
@@ -45,6 +46,7 @@
 
 <script>
 export default {
+    name:'login_page',
     data() {
         return {
             email: '',
