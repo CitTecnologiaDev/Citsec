@@ -37,7 +37,7 @@ export default {
                 {
                     label: 'Home',
                     items: [{
-                        label: 'Painel', icon: 'pi pi-fw pi-home', to: '/'
+                        label: 'Painel', icon: 'pi pi-fw pi-home', to: '/dashboard'
                     },
                     // {label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login'},
                     // ]
@@ -75,6 +75,7 @@ export default {
                         {label: 'Empresa'},
                         {label: 'Suporte'},
                         {label: 'FAQ', to: '/messages'},
+                        {label: 'Sair', to: '/'}
                        
 					]
 				},
