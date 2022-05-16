@@ -4,19 +4,19 @@ import App from './App.vue';
 const routes = [
     {
         path: '/',
+        name:'login_page',
+        component: () => import('@/pages/Login')
+    },
+    {
+        path: '/app',
         name: 'app',
         component: App,
         children: [
             {
-                path: '',
+                path: '/dashboard',
                 name: 'dashboard',
                 component: () => import('./components/Dashboard.vue')
-            }, 
-            // {
-            //     path: '/dashboard',
-            //     name: 'dashboard',
-            //     component: () => import('./components/Dashboard.vue')
-            // },
+            },
             {
                 path: '/formlayout',
                 name: 'formlayout',
@@ -150,11 +150,6 @@ const routes = [
                 component: () => import('./components/IconsDemo.vue')
             }
         ]
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: () => import('./pages/Login.vue')
     },
     {
         path: '/landing',
