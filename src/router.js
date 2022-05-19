@@ -28,6 +28,11 @@ const routes = [
                 name: 'input',
                 component: () => import('./components/InputDemo.vue')
             },
+            {
+                path: '/mapeamento',
+                name: 'mapeamento',
+                component: () => import('./components/Mapeamento.vue')
+            },
             // {
             //     path: '/questionario',
             //     name: 'questionario',

@@ -31,6 +31,12 @@
 					<span>Perfil</span>
 				</button>
 			</li>
+			<li>
+				<button class="p-link layout-topbar-button">
+					<i class="pi pi-fw pi-sign-in" @click="$router.push('/')"></i>
+					<span>Sair</span>
+				</button>
+			</li>
 		</ul>
 	</div>
 </template>

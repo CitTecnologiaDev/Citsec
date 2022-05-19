@@ -67,10 +67,11 @@
     <div
       style="
         display: inline-block;
-        width: 100%;
-        height: 70px;
+        width: 50%;
+        height: 60px;
         left: 15px;
-        padding: 10px;
+        padding-top: 20px;
+        padding-left: 10px;
         <!-- background: #af2; -->
       "
     >
@@ -78,13 +79,16 @@
         <InputText
           type="text"
           v-model="value2"
-          placeholder="Buscar"
-          style="width: 313px; height: 33px; left: 54px; top: 5px"
+          placeholder="Nome do processo"
+          style="width: 642px; height: 33px; left: 54px; top: 5px"
         />
-        <i class="pi pi-search" />
+        <!-- <i class="pi pi-search" /> -->
       </span>
+    
+        
 
-      <span>
+
+      <!-- <span>
         <Dropdown
           v-model="selectArea"
           :options="areas"
@@ -102,14 +106,35 @@
           placeholder="Grupos"
           style="width: 313px; height: 33px; left: 16px; top: 5px"
         />
-      </span>
+      </span> -->
     </div>
 
     <div
       style="
         display: inline-block;
+        width: 50%;
+        height: 200px;
+        padding-top: 20px;
+        padding-left: 10px;
+        <!-- background: #af2; -->
+      "
+    >
+
+        
+            <InputText class="p-inputtext-lg"
+            type="text"
+            placeholder="Descrição do processo"
+            style="width: 600px;height: 166px; left: 54px; top: 5px"
+            />
+            
+       
+
+    </div>
+
+    <div
+      style="
         width: 100%;
-        height: 70px;
+        height: 40px;
         left: 15px;
         padding-top: 0px;
         padding-left: 10px;
@@ -117,33 +142,113 @@
       "
     >
       <span>
-        <Dropdown
-          v-model="selectUnidade"
-          :options="unidades"
-          optionLabel="name"
-          placeholder="Unidades"
-          style="width: 313px; height: 33px; top: 5px"
+        <InputText
+          type="text"
+          v-model="value2"
+          placeholder="Papel da empresa no processo"
+          style="width: 313px; height: 33px; left: 54px; top: 5px"
         />
       </span>
 
       <span style="padding-left: 15px">
-        <Dropdown
-          v-model="selectSituacao"
-          :options="situacoes"
-          optionLabel="name"
-          placeholder="Situação"
-          style="width: 313px; height: 33px; top: 5px"
+        <InputText
+          type="text"
+          v-model="value2"
+          placeholder="Grupo do processo"
+          style="width: 313px; height: 33px; left: 54px; top: 5px"
         />
       </span>
 
-      <a
-        class="font-medium no-underline ml-2 text-right cursor-pointer"
-        style="color: #3783c6; padding-left: 20px"
-        >Limpar filtros</a
-      >
     </div>
 
-    <div style="width: 100%; padding: 10px; height: 400px">
+    <div
+      style="
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        left: 15px;
+        padding-top: 0px;
+        padding-left: 10px;
+        <!-- background: #abc; -->
+      "
+    >
+
+    <span>
+        <InputText
+          type="text"
+          v-model="value2"
+          placeholder="Ativos organizacionais"
+          style="width: 313px; height: 33px; left: 54px; top: 5px"
+        />
+      </span>
+
+      <span style="padding-left: 15px">
+        <InputText
+          type="text"
+          v-model="value2"
+          placeholder="Unidade responsável"
+          style="width: 313px; height: 33px; left: 54px; top: 5px"
+        />
+      </span>
+
+    </div>
+
+    <div
+      style="
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        left: 15px;
+        padding-top: 0px;
+        padding-left: 10px;
+        <!-- background: #abc; -->
+      "
+    >
+
+    <span>
+        <InputText
+          type="text"
+          v-model="value2"
+          placeholder="Responsável"
+          style="width: 313px; height: 33px; left: 54px; top: 5px"
+        />
+      </span>
+
+      <span style="padding-left: 15px">
+        <InputText
+          type="text"
+          v-model="value2"
+          placeholder="Contato"
+          style="width: 313px; height: 33px; left: 54px; top: 5px"
+        />
+      </span>
+
+    </div>
+
+    <div
+      style="
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        left: 15px;
+        padding-top: 0px;
+        padding-left: 10px;
+        <!-- background: #abc; -->
+      "
+    >
+
+        <span>
+            <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Área responsável"
+            style="width: 313px; height: 33px; left: 54px; top: 5px"
+            />
+        </span>
+
+    </div>
+
+    <!-- <div style="width: 100%; padding: 10px; height: 400px">
       <div class="card">
         <DataTable :value="processes" removableSort responsiveLayout="scroll">
           <Column field="id" header="ID" :sortable="true"></Column>
@@ -159,16 +264,17 @@
           <Column field="action" header="Ações" :sortable="true"></Column>
         </DataTable>
       </div>
-    </div>
+    </div> -->
 
     <div style="width: 100%; height: 100px; padding: 30px">
       <span>
-        <Button
+        <!-- <Button
           label="Novo Mapeamento"
-          style="float: right; width: 220px; height: 32px; padding-right: 29px" @click="$router.push('app/mapeamento')"
-        />
+          style="float: right; width: 220px; height: 32px; padding-right: 29px" @click="$router.push('app/dashboard')"
+        /> -->
       </span>
     </div>
+    
   </div>
 </template>
 <script>

@@ -71,6 +71,7 @@ export default {
                         {label: 'Relatórios'},
                         {label: 'Modelo de contratos'},
                         {label: 'Comitê e usuários'},
+                        {label: 'Base legal'},
                         {label: 'Canal do DPO'},
                         {label: 'Empresa'},
                         {label: 'Suporte'},
