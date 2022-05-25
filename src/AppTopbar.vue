@@ -1,10 +1,10 @@
 <template>
 	<div class="layout-topbar">
-		<router-link to="/" class="layout-topbar-logo">
+		<router-link to="app/dashboard" class="layout-topbar-logo">
 			<img alt="Logo" :src="topbarImage()"/>
 		</router-link>
 		<button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle">
-			<i class="pi pi-bars"></i>
+			<i class="pi pi-bars" title="Menu lateral"></i>
 		</button>
 
 		<button class="p-link layout-topbar-menu-button layout-topbar-button"
@@ -15,26 +15,26 @@
 		<ul class="layout-topbar-menu hidden lg:flex origin-top">
 			<li>
 				<button class="p-link layout-topbar-button">
-					<i class="pi pi-calendar"></i>
+					<i class="pi pi-calendar" title="Agenda"></i>
 					<span>Eventos</span>
 				</button>
 			</li>
 			<li>
 				<button class="p-link layout-topbar-button">
-					<i class="pi pi-cog"></i>
+					<i class="pi pi-cog" title="Configurações"></i>
 					<span>Configurações</span>
 				</button>
 			</li>
 			<li>
 				<button class="p-link layout-topbar-button">
-					<i class="pi pi-user"></i>
+					<i class="pi pi-user" title="Perfil"></i>
 					<span>Perfil</span>
 				</button>
 			</li>
 			<li>
 				<button class="p-link layout-topbar-button">
-					<i class="pi pi-fw pi-sign-in" @click="$router.push('/')"></i>
-					<span>Sair</span>
+					<i class="pi pi-fw pi-sign-in" title="Sair" @click="$router.push('/')"></i>
+					<span>Sair </span>
 				</button>
 			</li>
 		</ul>

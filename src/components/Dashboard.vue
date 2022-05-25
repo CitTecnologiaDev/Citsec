@@ -12,7 +12,7 @@
 					</div>
 				</div>
 				<span class="text-green-500 font-medium">24 novos </span>
-				<span class="text-500">desde o último acesso</span>
+				<span class="text-500">processos</span>
 			</div>
 		</div>
 		<div class="col-12 lg:col-6 xl:col-3">

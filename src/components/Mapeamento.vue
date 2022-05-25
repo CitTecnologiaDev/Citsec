@@ -20,7 +20,7 @@
     <span
       class="p-float-label"
       style="
-        width: 850px;
+        width: 750px;
         height: 33px;
         left: 15px;
         padding-top: 20px;
@@ -38,11 +38,11 @@
       >
         Home / Page 01 / Page 02 / Page 03
       </p>
-    </span>
+    </span> 
     <span
       class="p-float-label"
       style="
-        width: 850px;
+        width: 750px;
         height: 40px;
         left: 15px;
         padding-top: 10px;
@@ -64,218 +64,218 @@
         Mapeamento de processos, dados e registro de atividades
       </p>
     </span>
-    <div
-      style="
-        display: inline-block;
-        width: 50%;
-        height: 60px;
-        left: 15px;
-        padding-top: 20px;
-        padding-left: 10px;
-        <!-- background: #af2; -->
-      "
-    >
-      <span class="p-input-icon-right">
-        <InputText
-          type="text"
-          v-model="value2"
-          placeholder="Nome do processo"
-          style="width: 642px; height: 33px; left: 54px; top: 5px"
-        />
-        <!-- <i class="pi pi-search" /> -->
-      </span>
-    
+
+    <!-- <div style="display: inline-block; width: 500px; background: #aef">
+          <InputText class="p-inputtext-lg"
+              type="text"
+              placeholder="Descrição do processo"
+              style="width: 400px; height: 220px"
+            />
+    </div> -->
+
+
+    <div style="width: 100%; padding-top: 20px; height: 400px">
+      <div
+        style="
+          width: 700px;
+          height: 40px;
+          left: 15px;
+          padding-left: 10px;
+          display: inline-block;
+        "
+      >
+        <span class="p-input-icon-right">
+          <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Nome do processo"
+            style="width: 642px; height: 33px; left: 54px; top: 5px"
+          />
+        </span>
+
+      </div>
+
+      <div style="width: 600px; height: 200px; float: right; padding-right: 30px;">
+          <InputText class="p-inputtext-lg"
+              type="text"
+              placeholder="Descrição do processo"
+              style="width: 400px; height: 166px; margin-right: 15px;"
+            />
+      </div>
+
+      <div
+        style="
+          width: 700px;
+          height: 40px;
+          left: 15px;
+          padding: 10px;
+          
+        "
+      >
+        <span style="padding-right: 15px">
+          <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Papel da empresa no processo"
+            style="width: 313px; height: 33px; left: 54px; top: 5px"
+          />
+        </span>
+
+        
+          <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Grupo do processo"
+            style="width: 313px; height: 33px; left: 54px; top: 5px; padding-left: 15px"
+          />
+       
+
+      </div>
+
+      <div
+        style="
+          
+          width: 700px;
+          height: 40px;
+          left: 15px;     
+          padding: 10px;
+         
+        "
+      >
+
+        <span style="padding-right: 15px">
+          <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Ativos organizacionais"
+            style="width: 313px; height: 33px; left: 54px; top: 5px"
+          />
+        </span>
+
+       
+          <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Unidade responsável"
+            style="width: 313px; height: 33px; left: 54px; top: 5px; padding-left: 15px"
+          />
         
 
+      </div>
 
-      <!-- <span>
-        <Dropdown
-          v-model="selectArea"
-          :options="areas"
-          optionLabel="name"
-          placeholder="Áreas"
-          style="width: 313px; height: 33px; left: 16px; top: 5px"
-        />
-      </span>
+      <div
+        style="
+        
+          width: 700px;
+          height: 40px;
+          left: 15px;
+          padding: 10px;
+         
+        "
+      >
 
-      <span style="padding-left: 20px">
-        <Dropdown
-          v-model="selectGrupo"
-          :options="grupos"
-          optionLabel="name"
-          placeholder="Grupos"
-          style="width: 313px; height: 33px; left: 16px; top: 5px"
-        />
-      </span> -->
+      <span style="padding-right: 15px">
+          <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Responsável"
+            style="width: 313px; height: 33px; left: 54px; top: 5px"
+          />
+      </span> 
+
+        
+          <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Contato"
+            style="width: 313px; height: 33px; left: 54px; top: 5px; padding-left: 15px"
+          />
+        
+
+      </div>
+
+      <div
+        style="
+         
+          width: 700px;
+          height: 40px;
+          left: 15px;
+          padding: 10px;
+          
+        "
+      >
+
+         
+              <InputText
+              type="text"
+              v-model="value2"
+              placeholder="Área responsável"
+              style="width: 313px; height: 33px; left: 54px; top: 5px"
+              />
+          
+
+      </div> 
+
+
     </div>
 
-    <div
-      style="
-        display: inline-block;
-        width: 50%;
-        height: 200px;
-        padding-top: 20px;
-        padding-left: 10px;
-        <!-- background: #af2; -->
-      "
-    >
+     <!-- <div style="width: 750px; background: #abc; padding-top: 20px; height: 500px; display: inline-block">
+      <div
+        style="
+          width: 700px;
+          height: 40px;
+          left: 15px;
+          padding-left: 10px;
+          background: #FEC;
+        "
+      > -->
+        
+          <!-- <InputText
+            type="text"
+            v-model="value2"
+            placeholder="Descrição do processo"
+            
+          /> -->
+        
+
+      <!-- </div> -->
+    <!-- </div> -->
+
+  
+
+<!--     
+    <div style="width: 250px; background: #aef; display: inline-block">
 
         
             <InputText class="p-inputtext-lg"
             type="text"
             placeholder="Descrição do processo"
-            style="width: 600px;height: 166px; left: 54px; top: 5px"
+            style="width: 200px; height: 220px; top: 5px"
             />
             
        
 
-    </div>
-
-    <div
-      style="
-        width: 100%;
-        height: 40px;
-        left: 15px;
-        padding-top: 0px;
-        padding-left: 10px;
-        <!-- background: #abc; -->
-      "
-    >
-      <span>
-        <InputText
-          type="text"
-          v-model="value2"
-          placeholder="Papel da empresa no processo"
-          style="width: 313px; height: 33px; left: 54px; top: 5px"
-        />
-      </span>
-
-      <span style="padding-left: 15px">
-        <InputText
-          type="text"
-          v-model="value2"
-          placeholder="Grupo do processo"
-          style="width: 313px; height: 33px; left: 54px; top: 5px"
-        />
-      </span>
-
-    </div>
-
-    <div
-      style="
-        display: inline-block;
-        width: 100%;
-        height: 40px;
-        left: 15px;
-        padding-top: 0px;
-        padding-left: 10px;
-        <!-- background: #abc; -->
-      "
-    >
-
-    <span>
-        <InputText
-          type="text"
-          v-model="value2"
-          placeholder="Ativos organizacionais"
-          style="width: 313px; height: 33px; left: 54px; top: 5px"
-        />
-      </span>
-
-      <span style="padding-left: 15px">
-        <InputText
-          type="text"
-          v-model="value2"
-          placeholder="Unidade responsável"
-          style="width: 313px; height: 33px; left: 54px; top: 5px"
-        />
-      </span>
-
-    </div>
-
-    <div
-      style="
-        display: inline-block;
-        width: 100%;
-        height: 40px;
-        left: 15px;
-        padding-top: 0px;
-        padding-left: 10px;
-        <!-- background: #abc; -->
-      "
-    >
-
-    <span>
-        <InputText
-          type="text"
-          v-model="value2"
-          placeholder="Responsável"
-          style="width: 313px; height: 33px; left: 54px; top: 5px"
-        />
-      </span>
-
-      <span style="padding-left: 15px">
-        <InputText
-          type="text"
-          v-model="value2"
-          placeholder="Contato"
-          style="width: 313px; height: 33px; left: 54px; top: 5px"
-        />
-      </span>
-
-    </div>
-
-    <div
-      style="
-        display: inline-block;
-        width: 100%;
-        height: 40px;
-        left: 15px;
-        padding-top: 0px;
-        padding-left: 10px;
-        <!-- background: #abc; -->
-      "
-    >
-
-        <span>
-            <InputText
-            type="text"
-            v-model="value2"
-            placeholder="Área responsável"
-            style="width: 313px; height: 33px; left: 54px; top: 5px"
-            />
-        </span>
-
-    </div>
-
-    <!-- <div style="width: 100%; padding: 10px; height: 400px">
-      <div class="card">
-        <DataTable :value="processes" removableSort responsiveLayout="scroll">
-          <Column field="id" header="ID" :sortable="true"></Column>
-          <Column field="name" header="Nome" :sortable="true"></Column>
-          <Column
-            field="description"
-            header="Descrição"
-            :sortable="true"
-          ></Column>
-          <Column field="area" header="Área" :sortable="true"></Column>
-          <Column field="group" header="Grupo" :sortable="true"></Column>
-          <Column field="unity" header="Unidade" :sortable="true"></Column>
-          <Column field="action" header="Ações" :sortable="true"></Column>
-        </DataTable>
-      </div>
     </div> -->
 
-    <div style="width: 100%; height: 100px; padding: 30px">
-      <span>
-        <!-- <Button
-          label="Novo Mapeamento"
-          style="float: right; width: 220px; height: 32px; padding-right: 29px" @click="$router.push('app/dashboard')"
-        /> -->
-      </span>
+    <div style="width: 100%; height: 100px; padding-right: 20px; padding-top: 30px">
+    
+      
+        <Button
+          label="Salvar processo"
+          style="float: right; width: 220px; height: 32px;"
+        />
+      
+      
+        <Button
+          label="Cancelar"
+          style="float: right; width: 220px; height: 32px; background-color: white; margin-right: 15px; color: #2196F3" @click="$router.push('app/input')"
+        />
+     
     </div>
     
   </div>
+
+   
 </template>
 <script>
 import CountryService from "../service/CountryService";
