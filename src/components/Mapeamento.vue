@@ -95,11 +95,11 @@
 
       </div>
 
-      <div style="width: 600px; height: 200px; float: right; padding-right: 30px;">
+      <div style="width: 45%; height: 200px; float: right; padding-right: 30px;">
           <InputText class="p-inputtext-lg"
               type="text"
               placeholder="Descrição do processo"
-              style="width: 400px; height: 166px; margin-right: 15px;"
+              style="width: 100%; height: 166px; margin-right: 15px;"
             />
       </div>
 
