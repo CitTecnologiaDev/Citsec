@@ -31,7 +31,7 @@
         style="
           font-family: 'Montserrat', sans-serif;
           color: #000000;
-          font-weight: 1000;
+          font-weight: 400;
           font-size: 15px;
           line-height: 17px;
         "
@@ -55,7 +55,7 @@
         style="
           font-family: 'Montserrat', sans-serif;
           color: #000000;
-          font-weight: 1000;
+          font-weight: 400;
           font-size: 16px;
           line-height: 22px;
           padding-top: 10px;
