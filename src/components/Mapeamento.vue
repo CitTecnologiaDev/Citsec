@@ -77,7 +77,7 @@
     <div style="width: 100%; padding-top: 20px; height: 400px">
       <div
         style="
-          width: 700px;
+          width: 100%;
           height: 40px;
           left: 15px;
           padding-left: 10px;
@@ -89,15 +89,14 @@
             type="text"
             v-model="value2"
             placeholder="Nome do processo"
-            style="width: 642px; height: 33px; left: 54px; top: 5px"
+            style="width: 535px; height: 33px; left: 54px; top: 5px"
           />
         </span>
 
       </div>
 
-      <div style="width: 45%; height: 200px; float: right; padding-right: 30px;">
-          <InputText class="p-inputtext-lg"
-              type="text"
+      <div style="width: 45%; height: 200px; float: right; padding-right: 30px; padding-top: 15px; padding-left: 30px">
+          <Textarea v-model="value" :autoResize="true" rows="5" cols="20" 
               placeholder="Descrição do processo"
               style="width: 100%; height: 166px; margin-right: 15px;"
             />
@@ -105,7 +104,7 @@
 
       <div
         style="
-          width: 700px;
+          width: 100%;
           height: 40px;
           left: 15px;
           padding: 10px;
@@ -117,16 +116,17 @@
             type="text"
             v-model="value2"
             placeholder="Papel da empresa no processo"
-            style="width: 313px; height: 33px; left: 54px; top: 5px"
+            style="width: 260px; height: 33px; left: 54px; top: 5px"
           />
         </span>
 
         
-          <InputText
-            type="text"
-            v-model="value2"
+          <Dropdown
+          v-model="selectGrupo"
+            :options="grupos"
+            optionLabel="name"
             placeholder="Grupo do processo"
-            style="width: 313px; height: 33px; left: 54px; top: 5px; padding-left: 15px"
+            style="width: 260px; height: 33px; top: 5px;"
           />
        
 
@@ -135,7 +135,7 @@
       <div
         style="
           
-          width: 700px;
+          width: 100%;
           height: 40px;
           left: 15px;     
           padding: 10px;
@@ -148,16 +148,17 @@
             type="text"
             v-model="value2"
             placeholder="Ativos organizacionais"
-            style="width: 313px; height: 33px; left: 54px; top: 5px"
+            style="width: 260px; height: 33px; left: 54px; top: 5px"
           />
         </span>
 
        
-          <InputText
-            type="text"
-            v-model="value2"
+          <Dropdown
+            v-model="selectUnidade"
+            :options="unidades"
+            optionLabel="name"
             placeholder="Unidade responsável"
-            style="width: 313px; height: 33px; left: 54px; top: 5px; padding-left: 15px"
+            style="width: 260px; height: 33px; top: 5px;"
           />
         
 
@@ -166,11 +167,11 @@
       <div
         style="
         
-          width: 700px;
+          width: 100%;
           height: 40px;
           left: 15px;
-          padding: 10px;
-         
+          padding-top: 15px;
+          padding-left: 10px;  
         "
       >
 
@@ -179,7 +180,7 @@
             type="text"
             v-model="value2"
             placeholder="Responsável"
-            style="width: 313px; height: 33px; left: 54px; top: 5px"
+            style="width: 260px; height: 33px; left: 54px; top: 10px"
           />
       </span> 
 
@@ -188,7 +189,7 @@
             type="text"
             v-model="value2"
             placeholder="Contato"
-            style="width: 313px; height: 33px; left: 54px; top: 5px; padding-left: 15px"
+            style="width: 260px; height: 33px; left: 54px; top: 5px; padding-left: 15px"
           />
         
 
@@ -197,7 +198,7 @@
       <div
         style="
          
-          width: 700px;
+          width: 100%;
           height: 40px;
           left: 15px;
           padding: 10px;
@@ -206,12 +207,13 @@
       >
 
          
-              <InputText
-              type="text"
-              v-model="value2"
-              placeholder="Área responsável"
-              style="width: 313px; height: 33px; left: 54px; top: 5px"
-              />
+          <Dropdown
+            v-model="selectArea"
+            :options="areas"
+            optionLabel="name"
+            placeholder="Área responsável"
+            style="width: 260px; height: 33px; top: 5px;"
+          />
           
 
       </div> 
