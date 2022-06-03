@@ -1,8 +1,8 @@
 <template>
 	<div class="layout-topbar">
-		<router-link to="app/dashboard" class="layout-topbar-logo">
+		<span>
 			<img alt="Logo" :src="topbarImage()"/>
-		</router-link>
+		</span>
 		<button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle">
 			<i class="pi pi-bars" title="Menu lateral"></i>
 		</button>
@@ -15,6 +15,18 @@
 		<ul class="layout-topbar-menu hidden lg:flex origin-top">
 			<li>
 				<button class="p-link layout-topbar-button">
+					<i class="pi pi-user" title="Perfil"></i>
+					<span>Perfil</span>
+				</button>
+			</li>
+			<li>
+				<button class="p-link layout-topbar-button">
+					<i class="pi pi-building" title="Empresa"></i>
+					<span>Empresa</span>
+				</button>
+			</li>
+			<li>
+				<button class="p-link layout-topbar-button">
 					<i class="pi pi-calendar" title="Agenda"></i>
 					<span>Eventos</span>
 				</button>
@@ -23,12 +35,6 @@
 				<button class="p-link layout-topbar-button">
 					<i class="pi pi-cog" title="Configurações"></i>
 					<span>Configurações</span>
-				</button>
-			</li>
-			<li>
-				<button class="p-link layout-topbar-button">
-					<i class="pi pi-user" title="Perfil"></i>
-					<span>Perfil</span>
 				</button>
 			</li>
 			<li>

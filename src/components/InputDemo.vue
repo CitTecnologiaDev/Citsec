@@ -4,7 +4,7 @@
     style="
       position: center;
       width: 100%;
-      height: 730px;
+      height: 100%;
       left: 25px;
       top: 34px;
       padding-top: 20px;
@@ -17,14 +17,13 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:100"
       rel="stylesheet"
     />
-    <span
+    <!-- <span
       class="p-float-label"
       style="
         width: 850px;
         height: 33px;
         left: 15px;
         padding-top: 20px;
-        <!-- background: #f32; -->
       "
     >
       <p
@@ -38,7 +37,7 @@
       >
         Home / Page 01 / Page 02 / Page 03
       </p>
-    </span>
+    </span> -->
     <span
       class="p-float-label"
       style="
@@ -143,23 +142,47 @@
       >
     </div>
 
-    <div style="width: 100%; padding: 10px; height: 400px">
+    <div style="width: 100%; padding: 10px; height: 100%">
       <div class="card">
-        <DataTable :value="processes" removableSort responsiveLayout="scroll">
+        <DataTable :value="process" removableSort responsiveLayout="scroll">
           <Column field="id" header="ID" :sortable="true"></Column>
           <Column field="name" header="Nome" :sortable="true"></Column>
-          <Column
-            field="description"
-            header="Descrição"
-            :sortable="true"
-          ></Column>
+          <Column field="description" header="Descrição" :sortable="true"></Column>
           <Column field="area" header="Área" :sortable="true"></Column>
           <Column field="group" header="Grupo" :sortable="true"></Column>
           <Column field="unity" header="Unidade" :sortable="true"></Column>
-          <Column field="action" header="Ações" :sortable="true"></Column>
+          <Column header="Ações">
+          <template #body="">
+                        <Button type="button" icon="pi pi-ellipsis-h" @click="toggle" style="height: 30px;"/>
+                        <Menu ref="menu" :model="submenu" :popup="true" />
+          </template>
+
+            
+             
+          </Column>
+        
+          <!-- <Button type="button" icon="pi pi-ellipsis-h" @click="toggle" style="height: 30px"/>
+          <Menu ref="menu" :model="submenu" :popup="true" /> -->
+        
+          
         </DataTable>
       </div>
     </div>
+
+    <!-- <div class="card">
+            <h5>Removable Sort</h5>
+            <DataTable :value="products" removableSort responsiveLayout="scroll">
+                <Column field="code" header="Code" :sortable="true"></Column>
+                <Column field="name" header="Name" :sortable="true"></Column>
+                <Column field="category" header="Category" :sortable="true"></Column>
+                <Column field="quantity" header="Quantity" :sortable="true"></Column>
+                <Column field="price" header="Price" :sortable="true">
+                    <template #body="slotProps">
+                        {{formatCurrency(slotProps.data.price)}}
+                    </template>
+                </Column>
+            </DataTable>
+    </div> -->
 
     <div style="width: 100%; height: 100px; padding: 30px">
       <span>
@@ -175,6 +198,7 @@
 import CountryService from "../service/CountryService";
 import NodeService from "../service/NodeService";
 import ProcessService from "../service/ProcessService";
+import ProductService from "../service/ProductService";
 
 export default {
   data() {
@@ -204,6 +228,34 @@ export default {
         { name: "GAPs não identificados", code: "GN" },
         { name: "GAPs corrigidos", code: "GC" },
       ],
+      submenu: [
+        {
+					label: 'Finalidade/Base Legal',
+				},
+				{
+					// label: 'Exportar',
+          // formatos: [{label: 'PDF'},
+          //           {label: 'Excel'}]
+          label: 'Exportar',
+          items: [{label: 'PDF', icon: 'pi pi-download'},
+                {label: 'Excel', icon: 'pi pi-download'}]
+				},
+				{
+          label: 'Opções',
+					items: [{label: 'Revisões'},
+                {label: 'Alterar situações'},
+                {label: 'Excluir'}]
+          
+          // label: 'Revisões',
+				},
+				// {
+        //   label: 'Alterar situações',
+        // },
+        // {
+        //   label: 'Excluir',
+        // },
+      ],
+      products: null,
       selectSituacao: null,
       selectUnidade: null,
       selectGrupo: null,
@@ -270,6 +322,7 @@ export default {
       selectedNode: null,
     };
   },
+  productService: null,
   processService: null,
   countryService: null,
   nodeService: null,
@@ -277,6 +330,7 @@ export default {
     this.countryService = new CountryService();
     this.nodeService = new NodeService();
     this.processService = new ProcessService();
+    this.productService = new ProductService();
   },
   mounted() {
     this.countryService.getCountries().then((data) => (this.autoValue = data));
@@ -284,6 +338,7 @@ export default {
       .getTreeNodes()
       .then((data) => (this.treeSelectNodes = data));
     this.processService.getProcessSmall().then((data) => (this.process = data));
+    this.productService.getProductsSmall().then(data => this.products = data);
   },
   methods: {
     searchCountry(event) {
@@ -298,6 +353,12 @@ export default {
           });
         }
       }, 250);
+    },
+    formatCurrency(value) {
+            return value.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+    },
+    toggle(event) {
+      this.$refs.menu.toggle(event);
     },
   },
 };

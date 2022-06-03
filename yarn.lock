@@ -1732,7 +1732,7 @@
     "mime-types" "~2.1.34"
     "negotiator" "0.6.3"
 
-"acorn-jsx@^5.2.0", "acorn-jsx@^5.3.1":
+"acorn-jsx@^5.2.0", "acorn-jsx@^5.3.2":
   "integrity" "sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ=="
   "resolved" "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.2.tgz"
   "version" "5.3.2"
@@ -1752,7 +1752,7 @@
   "resolved" "https://registry.npmjs.org/acorn/-/acorn-6.4.2.tgz"
   "version" "6.4.2"
 
-"acorn@^8.7.0":
+"acorn@^8.7.1":
   "integrity" "sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A=="
   "resolved" "https://registry.npmjs.org/acorn/-/acorn-8.7.1.tgz"
   "version" "8.7.1"
@@ -3234,7 +3234,7 @@
   dependencies:
     "ms" "^2.1.1"
 
-"debug@^4.0.1", "debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.2":
+"debug@^4.0.1", "debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.4":
   "integrity" "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   "version" "4.3.4"
@@ -3685,17 +3685,18 @@
     "object-hash" "^1.1.4"
     "rimraf" "^2.6.1"
 
-"eslint-plugin-vue@^8.7.1":
-  "integrity" "sha512-28sbtm4l4cOzoO1LtzQPxfxhQABararUb1JtqusQqObJpWX2e/gmVyeYVfepizPFne0Q5cILkYGiBoV36L12Wg=="
-  "resolved" "https://registry.npmjs.org/eslint-plugin-vue/-/eslint-plugin-vue-8.7.1.tgz"
-  "version" "8.7.1"
+"eslint-plugin-vue@^9.1.0":
+  "integrity" "sha512-EPCeInPicQ/YyfOWJDr1yfEeSNoFCMzUus107lZyYi37xejdOolNzS5MXGXp8+9bkoKZMdv/1AcZzQebME6r+g=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-vue/-/eslint-plugin-vue-9.1.0.tgz"
+  "version" "9.1.0"
   dependencies:
     "eslint-utils" "^3.0.0"
     "natural-compare" "^1.4.0"
     "nth-check" "^2.0.1"
     "postcss-selector-parser" "^6.0.9"
     "semver" "^7.3.5"
-    "vue-eslint-parser" "^8.0.1"
+    "vue-eslint-parser" "^9.0.1"
+    "xml-name-validator" "^4.0.0"
 
 "eslint-scope@^4.0.3":
   "integrity" "sha512-p7VutNr1O/QrxysMo3E45FjYDTeXBy0iTltPFNSqKAIfjDSXC+4dj+qfyuD8bfAXrW/y6lW3O76VaYNPKfpKrg=="
@@ -3713,7 +3714,7 @@
     "esrecurse" "^4.3.0"
     "estraverse" "^4.1.1"
 
-"eslint-scope@^7.0.0":
+"eslint-scope@^7.1.1":
   "integrity" "sha512-QKQM/UXpIiHcLqJ5AOyIW7XZmzjkzQXYE54n1++wb0u9V/abW3l9uQnxX8Z5Xd18xyKIMTUAyQ0k1e8pz6LUrw=="
   "resolved" "https://registry.npmjs.org/eslint-scope/-/eslint-scope-7.1.1.tgz"
   "version" "7.1.1"
@@ -3745,12 +3746,12 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz"
   "version" "2.1.0"
 
-"eslint-visitor-keys@^3.1.0", "eslint-visitor-keys@^3.3.0":
+"eslint-visitor-keys@^3.3.0":
   "integrity" "sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA=="
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz"
   "version" "3.3.0"
 
-"eslint@^6.2.0 || ^7.0.0 || ^8.0.0", "eslint@^6.7.2", "eslint@>= 1.6.0 < 7.0.0", "eslint@>= 4.12.1", "eslint@>=1.6.0 <7.0.0", "eslint@>=5", "eslint@>=6.0.0":
+"eslint@^6.2.0 || ^7.0.0 || ^8.0.0", "eslint@^6.8.0", "eslint@>= 1.6.0 < 7.0.0", "eslint@>= 4.12.1", "eslint@>=1.6.0 <7.0.0", "eslint@>=5", "eslint@>=6.0.0":
   "integrity" "sha512-K+Iayyo2LtyYhDSYwz5D5QdWw0hCacNzyq1Y821Xna2xSJj7cijoLLYmLxTQgcgZ9mC61nryMy9S7GRbYpI5Ig=="
   "resolved" "https://registry.npmjs.org/eslint/-/eslint-6.8.0.tgz"
   "version" "6.8.0"
@@ -3802,13 +3803,13 @@
     "acorn-jsx" "^5.2.0"
     "eslint-visitor-keys" "^1.1.0"
 
-"espree@^9.0.0":
-  "integrity" "sha512-bvdyLmJMfwkV3NCRl5ZhJf22zBFo1y8bYh3VYb+bfzqNB4Je68P2sSuXyuFquzWLebHpNd2/d5uv7yoP9ISnGQ=="
-  "resolved" "https://registry.npmjs.org/espree/-/espree-9.3.1.tgz"
-  "version" "9.3.1"
+"espree@^9.3.1":
+  "integrity" "sha512-D211tC7ZwouTIuY5x9XnS0E9sWNChB7IYKX/Xp5eQj3nFXhqmiUDB9q27y76oFl8jTg3pXcQx/bpxMfs3CIZbA=="
+  "resolved" "https://registry.npmjs.org/espree/-/espree-9.3.2.tgz"
+  "version" "9.3.2"
   dependencies:
-    "acorn" "^8.7.0"
-    "acorn-jsx" "^5.3.1"
+    "acorn" "^8.7.1"
+    "acorn-jsx" "^5.3.2"
     "eslint-visitor-keys" "^3.3.0"
 
 "esprima@^4.0.0":
@@ -7521,6 +7522,13 @@
   dependencies:
     "lru-cache" "^6.0.0"
 
+"semver@^7.3.6":
+  "integrity" "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g=="
+  "resolved" "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz"
+  "version" "7.3.7"
+  dependencies:
+    "lru-cache" "^6.0.0"
+
 "semver@2 || 3 || 4 || 5":
   "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
@@ -8595,18 +8603,18 @@
   "resolved" "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
   "version" "1.1.2"
 
-"vue-eslint-parser@^8.0.1":
-  "integrity" "sha512-dzHGG3+sYwSf6zFBa0Gi9ZDshD7+ad14DGOdTLjruRVgZXe2J+DcZ9iUhyR48z5g1PqRa20yt3Njna/veLJL/g=="
-  "resolved" "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-8.3.0.tgz"
-  "version" "8.3.0"
+"vue-eslint-parser@^9.0.1":
+  "integrity" "sha512-uCPQwTGjOtAYrwnU+76pYxalhjsh7iFBsHwBqDHiOPTxtICDaraO4Szw54WFTNZTAEsgHHzqFOu1mmnBOBRzDA=="
+  "resolved" "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-9.0.2.tgz"
+  "version" "9.0.2"
   dependencies:
-    "debug" "^4.3.2"
-    "eslint-scope" "^7.0.0"
-    "eslint-visitor-keys" "^3.1.0"
-    "espree" "^9.0.0"
+    "debug" "^4.3.4"
+    "eslint-scope" "^7.1.1"
+    "eslint-visitor-keys" "^3.3.0"
+    "espree" "^9.3.1"
     "esquery" "^1.4.0"
     "lodash" "^4.17.21"
-    "semver" "^7.3.5"
+    "semver" "^7.3.6"
 
 "vue-hot-reload-api@^2.3.0":
   "integrity" "sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog=="
@@ -8924,6 +8932,11 @@
   "version" "6.2.2"
   dependencies:
     "async-limiter" "~1.0.0"
+
+"xml-name-validator@^4.0.0":
+  "integrity" "sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw=="
+  "resolved" "https://registry.npmjs.org/xml-name-validator/-/xml-name-validator-4.0.0.tgz"
+  "version" "4.0.0"
 
 "xtend@^4.0.0", "xtend@~4.0.1":
   "integrity" "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ=="

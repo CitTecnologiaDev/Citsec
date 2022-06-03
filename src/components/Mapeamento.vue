@@ -17,14 +17,14 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:100"
       rel="stylesheet"
     />
-    <span
+    <!-- <span
       class="p-float-label"
       style="
         width: 750px;
         height: 33px;
         left: 15px;
         padding-top: 20px;
-        <!-- background: #f32; -->
+        
       "
     >
       <p
@@ -38,7 +38,7 @@
       >
         Home / Page 01 / Page 02 / Page 03
       </p>
-    </span> 
+    </span>  -->
     <span
       class="p-float-label"
       style="

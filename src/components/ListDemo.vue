@@ -20,8 +20,8 @@
 								<a href="https://www.youtube.com/watch?v=zHjmOTTppz8" target="_blank">
 									<img :src="'images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="my-4 md:my-0 w-9 md:w-10rem shadow-2 mr-5" />
 								</a>
-								<div class="flex-1 text-center md:text-left">
-									<div class="font-bold text-2xl">{{slotProps.data.name}}</div>
+								<div class="flex-1 text-center md:text-left" style="padding-top:10px">
+									<div class="font-bold text-2xl" style="padding-bottom: 10px">{{slotProps.data.name}}</div>
 									<div class="mb-3">{{slotProps.data.description}}</div>
 									<Rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false" class="mb-2"></Rating>
 									<div class="flex align-items-center">

@@ -3,7 +3,7 @@
 		{
 			"id": "1000",
 			"code": "f230fh0g3",
-			"name": "Nosso propósito",
+			"name": "Citsec, o nosso maior propósito",
 			"description": "Introdução a Citsec",
 			"image": "nossoProposito.png",
 			"price": 65,
@@ -11,6 +11,103 @@
 			"quantity": 24,
 			"inventoryStatus": "NOVO",
             "rating": 0
+		},
+		{
+			"id": "1001",
+			"code": "f230fh0g32",
+			"name": "Conhecendo a plataforma Citsec",
+			"description": "Tutorial para o uso da plataforma",
+			"image": "andre.jpeg",
+			"price": 65,
+			"category": "Tutorial",
+			"quantity": 24,
+			"inventoryStatus": "NOVO",
+            "rating": 5
+		},
+		{
+			"id": "1001",
+			"code": "f230fh0g32",
+			"name": "LGPD, por onde começar?",
+			"description": "Passos iniciais na LGPD",
+			"image": "deise.jpeg",
+			"price": 65,
+			"category": "LGPD",
+			"quantity": 24,
+			"inventoryStatus": "NOVO",
+            "rating": 4
+		},
+		{
+			"id": "1001",
+			"code": "f230fh0g32",
+			"name": "Conhecendo a LGPD por completo",
+			"description": "",
+			"image": "citsec.png",
+			"price": 65,
+			"category": "LGPD",
+			"quantity": 24,
+			"inventoryStatus": "NOVO",
+            "rating": 5
+		},
+		{
+			"id": "1001",
+			"code": "f230fh0g32",
+			"name": "A importância da conscientização",
+			"description": "",
+			"image": "citsec.png",
+			"price": 65,
+			"category": "Educacional",
+			"quantity": 24,
+			"inventoryStatus": "NOVO",
+            "rating": 5
+		},
+		{
+			"id": "1001",
+			"code": "f230fh0g32",
+			"name": "O que é um dado pessoal?",
+			"description": "",
+			"image": "citsec.png",
+			"price": 65,
+			"category": "LGPD",
+			"quantity": 24,
+			"inventoryStatus": "NOVO",
+            "rating": 5
+		},
+		{
+			"id": "1001",
+			"code": "f230fh0g32",
+			"name": "Aprendendo sobre os papéis da LGPD",
+			"description": "",
+			"image": "citsec.png",
+			"price": 65,
+			"category": "LGPD",
+			"quantity": 24,
+			"inventoryStatus": "NOVO",
+            "rating": 5
+		},
+		{
+			"id": "1001",
+			"code": "f230fh0g32",
+			"name": "Base legal e mito do consentimento",
+			"description": "",
+			"image": "citsec.png",
+			"price": 65,
+			"category": "Jurídico",
+			"quantity": 24,
+			"inventoryStatus": "NOVO",
+            "rating": 5
+		},
+		{
+			"id": "1001",
+			"code": "f230fh0g32",
+			"name": "Segurança da informação e ISO 27000",
+			"description": "",
+			"image": "citsec.png",
+			"price": 65,
+			"category": "Segurança da informação",
+			"quantity": 24,
+			"inventoryStatus": "NOVO",
+            "rating": 5
 		}
+		
 	]
 }

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export default class ProcessService {
     getProcessSmall() {
 		return fetch('data/processes-small.json').then(res => res.json()).then(d => d.data);

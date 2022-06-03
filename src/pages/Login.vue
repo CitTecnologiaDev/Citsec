@@ -21,9 +21,9 @@
                 
                         <label for="password1" class="block text-900 font-medium text-xl mb-2">Senha</label>
                         <!-- <Password id="password1" v-model="password" :toggleMask="true" class="w-full mb-3" inputClass="w-full" inputStyle="padding:1rem"></Password> -->
-                        <InputText id="password1" v-model="password" type="text" class="w-full mb-3" style="padding:1rem;" />
+                        <Password v-model="value1" :feedback="false" lass="w-full mb-3" inputClass="w-full" inputStyle="padding:1rem" style="width:100%" /><!-- <InputText id="password1" v-model="password" type="text" class="w-full mb-3" style="padding:1rem;" /> -->
                 
-                        <div class="flex align-items-center justify-content-between mb-5">
+                        <div class="flex align-items-center justify-content-between mb-5" style="padding-top: 15px">
                             <div class="flex align-items-center">
                                 <Checkbox id="rememberme1" v-model="checked" :binary="true" class="mr-2"></Checkbox>
                                 <label for="rememberme1">Lembre-me</label>
