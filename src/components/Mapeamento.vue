@@ -189,7 +189,7 @@
             type="text"
             v-model="value2"
             placeholder="Contato"
-            style="width: 260px; height: 33px; left: 54px; top: 5px; padding-left: 15px"
+            style="width: 260px; height: 33px; left: 54px; top: 5px"
           />
         
 

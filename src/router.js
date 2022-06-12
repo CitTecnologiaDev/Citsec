@@ -33,11 +33,11 @@ const routes = [
                 name: 'mapeamento',
                 component: () => import('./components/Mapeamento.vue')
             },
-            // {
-            //     path: '/questionario',
-            //     name: 'questionario',
-            //     component: () => import('./components/Questionario.vue')
-            // },
+            {
+                path: '/equipecomite',
+                name: 'equipecomite',
+                component: () => import('./components/EquipeComite.vue')
+            },
             {
                 path: '/floatlabel',
                 name: 'floatlabel',

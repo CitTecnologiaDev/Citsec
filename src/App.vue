@@ -70,7 +70,7 @@ export default {
                         {label: 'Gestão de riscos'},
                         {label: 'Relatórios'},
                         {label: 'Modelo de contratos'},
-                        {label: 'Comitê e usuários'},
+                        {label: 'Comitê e usuários', to: '/equipecomite'},
                         {label: 'Base legal'},
                         {label: 'Canal do DPO'},
                         {label: 'Empresa'},
