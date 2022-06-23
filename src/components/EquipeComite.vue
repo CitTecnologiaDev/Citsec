@@ -1,5 +1,5 @@
 <template>
-   <div style="width: 100%; padding: 10px; height: 100%">
+  <div style="width: 100%; padding: 10px; height: 100%">
       <div class="card">
          <div style="display: inline-block">
                 <h5>DPO</h5>
@@ -61,16 +61,89 @@
       </div>
     </div>
 
+<!-- <div style="width: 100%; padding: 10px; height: 100%">
+    <div class="card">
+            <h5>Session Storage</h5>
+            <DataTable :value="dpo" :paginator="true" :rows="10" v-model:filters="filters1"
+                v-model:selection="selectedDpo1" selectionMode="single" dataKey="id" responsiveLayout="scroll">
+                <template #header>
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search" />
+                        <InputText v-model="filters1['global'].value" placeholder="Procure pelo nome" />
+                    </span>
+                </template>
+                <Column field="name" header="Name" :sortable="true" style="width:25%">
+                    <template #filter>
+                        <InputText type="text" v-model="filters1['name']" class="p-column-filter"/>
+                    </template>
+                </Column>
+                <Column header="Country" :sortable="true" sortField="country.name" filterField="country.name" filterMatchMode="contains" style="width:25%">
+                    <template #body="slotProps">
+                        <img src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png" width="20" />
+                        <span class="image-text">{{slotProps.data.country.name}}</span>
+                    </template>
+                    <template #filter>
+                        <InputText type="text" v-model="filters1['country.name']" class="p-column-filter"/>
+                    </template>
+                </Column>
+                <Column header="Representative" :sortable="true" sortField="representative.name" filterField="representative.name" filterMatchMode="in" style="width:25%">
+                    <template #body="slotProps">
+                        <img :alt="slotProps.data.representative.name" src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png" width="20" style="vertical-align: middle" />
+                        <span class="image-text">{{slotProps.data.representative.name}}</span>
+                    </template>
+                        <template #filter>
+                        <MultiSelect v-model="filters1['representative.name']" :options="representatives" optionLabel="name" optionValue="name" class="p-column-filter">
+                            <template #option="slotProps">
+                                <div class="p-multiselect-representative-option">
+                                    <img :alt="slotProps.option.name" src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png" width="20" style="vertical-align: middle" />
+                                    <span class="image-text">{{slotProps.option.name}}</span>
+                                </div>
+                            </template>
+                        </MultiSelect>
+                    </template>
+                </Column>
+                <Column field="status" header="Status" :sortable="true" filterMatchMode="equals" style="width:25%">
+                    <template #body="slotProps">
+                        <span :class="'customer-badge status-' + slotProps.data.status">{{slotProps.data.status}}</span>
+                    </template>
+                    <template #filter>
+                        <Dropdown v-model="filters1['status']" :options="statuses" placeholder="Select a Status" class="p-column-filter" :showClear="true">
+                            <template #option="slotProps">
+                                <span :class="'customer-badge status-' + slotProps.option">{{slotProps.option}}</span>
+                            </template>
+                        </Dropdown>
+                    </template>
+                </Column>
+                <template #empty>
+                    No customers found.
+                </template>
+            </DataTable>
+        </div>
+</div> -->
    
 </template>
 <script>
 import CountryService from "../service/CountryService";
 import NodeService from "../service/NodeService";
 import ProcessService from "../service/ProcessService";
+import DpoService from "../service/DpoService";
 
 export default {
   data() {
     return {
+      dpo: null,
+            selectedDpo1: null,
+            selectedDpo2: null,
+            filters1: {},
+            filters2: {},
+            loading: true,
+            // representatives: [
+            //     {name: "Deisiele Souza", image: 'amyelsner.png'}
+            // ],
+            // statuses: [
+            //     'Disponível', 'Não disponível'
+            // ],
+      // dpoService: null,
       areas: [
         { name: "Financeiro", code: "FN" },
         { name: "Administrativo", code: "ADM" },
@@ -192,12 +265,18 @@ export default {
     this.nodeService = new NodeService();
     this.processService = new ProcessService();
 
+    // this.dpoService = new DpoService();
+    //     this.initFilters1();
+    //     this.initFilters2();
+
   },
   mounted() {
     this.countryService.getCountries().then((data) => (this.autoValue = data));
     this.nodeService
       .getTreeNodes()
       .then((data) => (this.treeSelectNodes = data));
+
+      //  this.dpoService.getCustomersMedium().then(data => this.dpo = data);
   
   },
   methods: {
@@ -214,6 +293,20 @@ export default {
         }
       }, 250);
     },
+
+    //  initFilters1() {
+    //         this.filters1 = {
+    //             'global': {value: null, matchMode: FilterMatchMode.CONTAINS}
+    //         }
+    //     },
+    //     initFilters2() {
+    //         this.filters2 = {
+    //             'global': {value: null, matchMode: FilterMatchMode.CONTAINS}
+    //         }
+    //     }
+
+
+
   },
 };
 </script>
