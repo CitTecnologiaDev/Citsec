@@ -39,6 +39,11 @@ const routes = [
                 component: () => import('./components/EquipeComite.vue')
             },
             {
+                path: '/uml',
+                name: 'uml',
+                component: () => import('./components/UMLMapeamento.vue')
+            },
+            {
                 path: '/floatlabel',
                 name: 'floatlabel',
                 component: () => import('./components/FloatLabelDemo.vue')

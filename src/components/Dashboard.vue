@@ -244,6 +244,12 @@
 		</div> -->
 	</div>
 	</div>
+
+<!-- teste do chatbot -->
+
+
+
+	
 </template>
 
 <script>
@@ -251,7 +257,7 @@ import EventBus from '@/AppEventBus';
 import ProductService from '../service/ProductService';
 // import {radarData, radarOptions} from './ChartDemo.vue';
 
-<script src="https://app.wotnot.io/chat-widget/7Qp262h8onKc125351614725W07j5HO0.js" defer/>
+// <script src="https://app.wotnot.io/chat-widget/7Qp262h8onKc125351614725W07j5HO0.js" defer/>
 
 export default {
 	data() {
@@ -438,3 +444,4 @@ export default {
 	}
 }
 </script>
+

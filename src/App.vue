@@ -76,6 +76,7 @@ export default {
                         {label: 'Empresa'},
                         {label: 'Suporte'},
                         {label: 'FAQ', to: '/messages'},
+                        {label: 'Teste UML', to: '/uml'},
                         {label: 'Sair', to: '/'}
                        
 					]
