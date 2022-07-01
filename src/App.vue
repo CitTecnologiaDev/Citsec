@@ -63,6 +63,15 @@ export default {
 						// {label: 'Misc', icon: 'pi pi-fw pi-circle-off', to: '/misc'},
 
                         {label: 'Treinamento', to: '/list'},
+                        // {label: 'Diagrama de Dados', to: '/uml'},
+                        {
+                            label: 'Diagramas',
+                            items: [
+                                {
+                                    label: 'Diagrama de dados', to: '/uml',
+                                },    
+                            ]
+                        },
                         {label: 'Questionários'},
                         {label: 'Mapeamento', to: '/input'},
                         {label: 'Gaps'},
@@ -76,7 +85,6 @@ export default {
                         {label: 'Empresa'},
                         {label: 'Suporte'},
                         {label: 'FAQ', to: '/messages'},
-                        {label: 'Teste UML', to: '/uml'},
                         {label: 'Sair', to: '/'}
                        
 					]
@@ -87,6 +95,7 @@ export default {
                 //         {label: 'Free Blocks', icon: 'pi pi-fw pi-eye', to: '/blocks', badge: "NEW"},
                 //         {label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: 'https://www.primefaces.org/primeblocks-vue', target: '_blank'}
                 //     ]
+                // },
                 // },
                 // {
                 //     label: 'Utilities',

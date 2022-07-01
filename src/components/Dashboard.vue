@@ -245,11 +245,6 @@
 	</div>
 	</div>
 
-<!-- teste do chatbot -->
-
-
-
-	
 </template>
 
 <script>
@@ -257,9 +252,13 @@ import EventBus from '@/AppEventBus';
 import ProductService from '../service/ProductService';
 // import {radarData, radarOptions} from './ChartDemo.vue';
 
-// <script src="https://app.wotnot.io/chat-widget/7Qp262h8onKc125351614725W07j5HO0.js" defer/>
 
 export default {
+	metaInfo: {
+      script: [
+        { src: 'https://app.wotnot.io/chat-widget/7Qp262h8onKc125351614725W07j5HO0.js', async: true, defer: true }
+      ],
+    },
 	data() {
 		return {
 			polarData: {
@@ -320,7 +319,19 @@ export default {
 	},
 	productService: null,
 	themeChangeListener: null,
+
 	mounted() {
+		
+		// Chatbot
+		(function (d, s, u) {
+			let h = d.getElementsByTagName(s)[0], k = d.createElement(s);
+			k.onload = function () {
+			let l = d.createElement(s); l.src = u; l.async = true;
+			h.parentNode.insertBefore(l, k.nextSibling);
+			};
+			k.async = true; k.src = 'https://storage.googleapis.com/push-webchat/wwc-latest.js';
+			h.parentNode.insertBefore(k, h);
+		})(document, 'script', 'https://weni-sp-integrations-production.s3.amazonaws.com/apptypes/wwc/ed9b0185-a931-4ff4-ac3a-6f285091f259/script.js');
 		this.productService.getProductsSmall().then(data => this.products = data);
 
 		this.themeChangeListener = (event) => {
@@ -443,5 +454,6 @@ export default {
 		}
 	}
 }
+
 </script>
 
