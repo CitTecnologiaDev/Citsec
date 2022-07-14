@@ -44,6 +44,16 @@ const routes = [
                 component: () => import('./components/UMLMapeamento.vue')
             },
             {
+                path: '/gestaoriscos',
+                name: 'gestaoriscos',
+                component: () => import('./components/GestaoRiscos.vue')
+            },
+            {
+                path: '/baselegal',
+                name: 'baselegal',
+                component: () => import('./components/BaseLegal.vue')
+            },
+            {
                 path: '/floatlabel',
                 name: 'floatlabel',
                 component: () => import('./components/FloatLabelDemo.vue')

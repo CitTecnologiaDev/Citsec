@@ -1,8 +1,8 @@
 
-export default class DPOService {
+export default class LawService {
 
-    getDPOsSmall() {
-		return fetch('/data/dpos-small.json').then(res => res.json()).then(d => d.data);
+    getLawsSmall() {
+		return fetch('/data/laws-small.json').then(res => res.json()).then(d => d.data);
 	}
 
 	// getLaws() {

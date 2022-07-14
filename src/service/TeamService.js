@@ -1,8 +1,8 @@
 
-export default class DPOService {
+export default class TeamService {
 
-    getDPOsSmall() {
-		return fetch('/data/dpos-small.json').then(res => res.json()).then(d => d.data);
+    getTeamsSmall() {
+		return fetch('/data/teams-small.json').then(res => res.json()).then(d => d.data);
 	}
 
 	// getLaws() {

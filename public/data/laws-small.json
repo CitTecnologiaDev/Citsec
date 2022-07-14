@@ -1,0 +1,10 @@
+{
+    "data": [
+        {"name": "Art. 11º - Dados Pessoais Sensíveis - Consentimento do Titular ou Responsável Legal", "law": "Art. 11, I","description": "Quando o titular ou seu responsável legal consentir, de forma específica e destacada, para finalidades específicas"},
+        {"name": "Art. 11º - Dados Pessoais Sensíveis - Cumprimento de Obrigação Legal", "law": "Art. 11, II, a","description": "Cumprimento de obrigação legal ou regulatória pelo controlador"},
+        {"name": "Art. 11º - Dados Pessoais Sensíveis - Administração Pública", "law": "Art. 11, II, b","description": "tratamento compartilhado de dados necessários à execução, pela administração pública, de políticas públicas previstas em leis ou regulamentos"},
+        {"name": "Art. 11º - Dados Pessoais Sensíveis - Realização de Estudos por Órgão de Pesquisa", "law": "Art. 11, II, c","description": "Realização de estudos por órgão de pesquisa, garantida, sempre que possível, a anonimização dos dados pessoais sensíveis"},
+        {"name": "Art. 11º - Dados Pessoais Sensíveis - Exercício Regular do Direito", "law": "Art. 11, II, d","description": "Exercício regular de direitos, inclusive em contrato e em processo judicial, administrativo e arbitral"}
+       
+    ]
+}

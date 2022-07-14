@@ -254,11 +254,6 @@ import ProductService from '../service/ProductService';
 
 
 export default {
-	metaInfo: {
-      script: [
-        { src: 'https://app.wotnot.io/chat-widget/7Qp262h8onKc125351614725W07j5HO0.js', async: true, defer: true }
-      ],
-    },
 	data() {
 		return {
 			polarData: {
