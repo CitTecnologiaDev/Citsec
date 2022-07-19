@@ -4,7 +4,7 @@
     style="
       position: center;
       width: 100%;
-      height: 730px;
+      height: 100%;
       left: 25px;
       top: 34px;
       padding-top: 20px;

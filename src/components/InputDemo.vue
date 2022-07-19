@@ -144,17 +144,24 @@
 
     <div style="width: 100%; padding: 10px; height: 100%">
       <div class="card">
-        <DataTable :value="process" removableSort responsiveLayout="scroll">
+        <DataTable :value="process" removableSort v-model:selection="selectedGaps" responsiveLayout="scroll">
           <Column field="id" header="ID" :sortable="true"></Column>
           <Column field="name" header="Nome" :sortable="true"></Column>
           <Column field="description" header="Descrição" :sortable="true"></Column>
           <Column field="area" header="Área" :sortable="true"></Column>
           <Column field="group" header="Grupo" :sortable="true"></Column>
           <Column field="unity" header="Unidade" :sortable="true"></Column>
+          <!-- <Column selectionMode="multiple" style="width: 3rem" :exportable="false"></Column> -->
+          <!-- <Column header="Gap">
+            <template #body="">
+              <InputSwitch v-model="defaultState" />
+            </template>
+          </Column> -->
+          <Column selectionMode="multiple" header="Gap identificado" headerStyle="width: 3em; padding-left: 3px"></Column>
           <Column header="Ações">
           <template #body="">
-                        <Button type="button" icon="pi pi-ellipsis-h" @click="toggle" style="height: 30px;"/>
-                        <Menu ref="menu" :model="submenu" :popup="true" />
+              <Button type="button" icon="pi pi-ellipsis-h" @click="toggle" style="height: 30px;"/>
+              <Menu ref="menu" :model="submenu" :popup="true" />
           </template>
 
           
@@ -190,6 +197,12 @@
           style="float: right; width: 220px; height: 32px; padding-right: 29px" @click="$router.push('app/mapeamento')"
         />
       </span>
+
+      <Button
+          icon="pi pi-upload"
+          title="Importar planilhas"
+          style="float: right; width: 50px; height: 32px; margin-right: 15px;"
+      />
     </div>
   </div>
 </template>
@@ -202,8 +215,17 @@ import ProductService from "../service/ProductService";
 
 
 export default {
+  props: {
+        defaultState: {
+            type: Boolean, 
+            default: false
+        }
+  },
   data() {
     return {
+      selectedGaps: null,
+      currentState: this.defaultState,
+      toggleActive: false,
       areas: [
         { name: "Financeiro", code: "FN" },
         { name: "Administrativo", code: "ADM" },
@@ -256,6 +278,7 @@ export default {
         //   label: 'Excluir',
         // },
       ],
+      checked: false,
       products: null,
       selectSituacao: null,
       selectUnidade: null,
@@ -342,25 +365,28 @@ export default {
     this.productService.getProductsSmall().then(data => this.products = data);
   },
   methods: {
-    searchCountry(event) {
-      setTimeout(() => {
-        if (!event.query.trim().length) {
-          this.autoFilteredValue = [...this.autoValue];
-        } else {
-          this.autoFilteredValue = this.autoValue.filter((country) => {
-            return country.name
-              .toLowerCase()
-              .startsWith(event.query.toLowerCase());
-          });
-        }
-      }, 250);
-    },
-    formatCurrency(value) {
-            return value.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+    triggerToggleEvent(value) {
+            this.toggleActive = value;
     },
     toggle(event) {
       this.$refs.menu.toggle(event);
     },
   },
+  computed: {
+        isActive() {
+        return this.currentState;
+    },
+
+    checkedValue: {
+        get() {
+            return this.defaultState
+        },
+        set(newValue) {
+            this.currentState = newValue;
+            this.$emit('change', newValue);
+        }
+    }
+        
+  }
 };
 </script>

@@ -1,7 +1,6 @@
 {
     "data": [
-        {"name": "Deise", "email": "deise@gmail.com","function": "Advogada", "departament": "Jurídico"},
-        {"name": "", "email": "","function": "", "departament": ""},
+        {"name": "André", "email": "andre@gmail.com","function": "Advogado", "departament": "Jurídico"},
         {"name": "", "email": "","function": "", "departament": ""},
         {"name": "", "email": "","function": "", "departament": ""},
         {"name": "", "email": "","function": "", "departament": ""},

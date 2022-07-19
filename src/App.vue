@@ -74,7 +74,6 @@ export default {
                         },
                         {label: 'Questionários'},
                         {label: 'Mapeamento', to: '/input'},
-                        {label: 'Gaps'},
                         {label: 'Plano de ação'},
                         {label: 'Gestão de riscos', to: 'gestaoriscos'},
                         {label: 'Relatórios'},
