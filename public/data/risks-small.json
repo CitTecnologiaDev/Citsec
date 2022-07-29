@@ -1,0 +1,8 @@
+{
+    "data": [
+        {"risco": "R01 Acesso não autorizado", "medida": "1. CONTROLE DE ACESSO LÓGICO, 2. DESENVOLVIMENTO SEGURO e 3. SEGURANÇA EM REDES","efeito": "Reduzir", "riscoR": "50", "medidaA": "Sim"},
+        {"risco": "R04 Roubo", "medida": "1. CONTROLE DE ACESSO LÓGICO, 2.CONTROLES CRIPTOGRÁFICOS e 3. PROTEÇÃO FÍSICA E DO AMBIENTE","efeito": "Reduzir", "riscoR": "25", "medidaA": "Sim"},
+        {"risco": "R06 Coleção excessiva", "medida": "1. Limitação da coleta","efeito": "Reduzir", "riscoR": "50", "medidaA": "Sim"}
+
+    ]
+}

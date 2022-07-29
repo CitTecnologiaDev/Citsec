@@ -49,6 +49,11 @@ const routes = [
                 component: () => import('./components/GestaoRiscos.vue')
             },
             {
+                path: '/planoacao',
+                name: 'planoacao',
+                component: () => import('./components/PlanoAcao.vue')
+            },
+            {
                 path: '/baselegal',
                 name: 'baselegal',
                 component: () => import('./components/BaseLegal.vue')

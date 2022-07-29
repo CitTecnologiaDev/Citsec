@@ -117,80 +117,55 @@
             </ColumnGroup>
         </DataTable> -->
 
-        <DataTable :value="products" showGridlines responsiveLayout="scroll">
+        <DataTable :value="risk" showGridlines responsiveLayout="scroll">
             <template #header>
                 Tabela de gestão de riscos
                 
             </template>
 
-            <Column field="name" header="Risco"></Column>
-            <Column field="name" header="Medida"></Column>
-            <Column field="name" header="Efeito sobre o risco"></Column>
-             <Column field="name" header="Risco residual"></Column>
-            <Column field="name" header="Medida(s) aprovada(s)"></Column>
+            <Column field="risco" header="Risco" />
+            <Column field="medida" header="Medida" />
+            <Column field="efeito" header="Efeito sobre o risco" />
+            <Column field="riscoR" header="Risco residual" />
+            <Column field="medidaA" header="Medida(s) aprovada(s)" />
             
         </DataTable>
 
     </div>
 
-    <!-- <div class="responsive-table"><p class="impactText">Impact</p><table class="table table-bordered table-responsive text-center"><tbody><tr><td></td><td class="td-top-header">Minor</td><td class="td-top-header">Moderate</td><td class="td-top-header">Major</td><td class="td-top-header">Critical</td></tr><tr><td class="td-left-header">76-100%</td><td class="td-yellow">0</td><td class="td-red">0</td><td class="td-red">0</td><td class="td-red">0</td></tr><tr><td class="td-left-header">51-75%</td><td class="td-yellow">0</td><td class="td-yellow">0</td><td class="td-yellow">0</td><td class="td-red">0</td></tr><tr><td class="td-left-header">26-50%</td><td class="td-green">0</td><td class="td-green">0</td><td class="td-yellow">0</td><td class="td-yellow">0</td></tr><tr><td class="td-left-header" riskmatrix-bind="text: likelyhoodRange">0-25%</td><td class="td-green">0</td><td class="td-green">0</td><td class="td-green">0</td><td class="td-green">0</td></tr></tbody></table></div> -->
-    
-    <!-- <div class="risk-matrix-box"><p class="likelihoodText">Likelihood</p><div class="responsive-table"><p class="impactText">Impact</p><table class="table table-bordered table-responsive text-center"><tbody><tr><td></td><td class="td-top-header">Minor</td><td class="td-top-header">Moderate</td><td class="td-top-header">Major</td><td class="td-top-header">Critical</td></tr><tr><td class="td-left-header">76-100%</td><td class="td-yellow">0</td><td class="td-red">0</td><td class="td-red">0</td><td class="td-red">0</td></tr><tr><td class="td-left-header">51-75%</td><td class="td-yellow">0</td><td class="td-yellow">0</td><td class="td-yellow">0</td><td class="td-red">0</td></tr><tr><td class="td-left-header">26-50%</td><td class="td-green">0</td><td class="td-green">0</td><td class="td-yellow">0</td><td class="td-yellow">0</td></tr><tr><td class="td-left-header" riskmatrix-bind="text: likelyhoodRange">0-25%</td><td class="td-green">0</td><td class="td-green">0</td><td class="td-green">0</td><td class="td-green">0</td></tr></tbody></table></div></div> -->
-  </div>
+  
+    </div>
 </template>
 
 <script>
+import RiskService from '../service/RiskService';
+
 export default {
     data() {
         return {
-            
-            sales: null,
+        
             home: {icon: 'pi pi-home', to: '/dashboard'},
             items: [
                 {label: 'Gestão de Riscos'},
             ],
+            risk: null,
              
         }
         
     },
-    
+    riskService: null,
     created() {
-        this.sales = [
-            {product: 'Bamboo Watch', lastYearSale: 51, thisYearSale: 40, lastYearProfit: 54406, thisYearProfit: 43342},
-            {product: 'Black Watch', lastYearSale: 83, thisYearSale: 9, lastYearProfit: 423132, thisYearProfit: 312122},
-            {product: 'Blue Band', lastYearSale: 38, thisYearSale: 5, lastYearProfit: 12321, thisYearProfit: 8500},
-            {product: 'Blue T-Shirt', lastYearSale: 49, thisYearSale: 22, lastYearProfit: 745232, thisYearProfit: 65323},
-            {product: 'Brown Purse', lastYearSale: 17, thisYearSale: 79, lastYearProfit: 643242, thisYearProfit: 500332},
-            {product: 'Chakra Bracelet', lastYearSale: 52, thisYearSale:  65, lastYearProfit: 421132, thisYearProfit: 150005},
-            {product: 'Galaxy Earrings', lastYearSale: 82, thisYearSale: 12, lastYearProfit: 131211, thisYearProfit: 100214},
-            {product: 'Game Controller', lastYearSale: 44, thisYearSale: 45, lastYearProfit: 66442, thisYearProfit: 53322},
-            {product: 'Gaming Set', lastYearSale: 90, thisYearSale: 56, lastYearProfit: 765442, thisYearProfit: 296232},
-            {product: 'Gold Phone Case', lastYearSale: 75, thisYearSale: 54, lastYearProfit: 21212, thisYearProfit: 12533}
-        ];
- 
+       this.riskService = new RiskService();
+    },
+    mounted() {
+        this.riskService.getRisksSmall().then(data => this.risk = data);
+        
     },
     methods: {
-        formatCurrency(value) {
-            return value.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
-        }
+       
     },
     computed: {
-        lastYearTotal() {
-            let total = 0;
-            for(let sale of this.sales) {
-                total += sale.lastYearProfit;
-            }
-
-            return this.formatCurrency(total);
-        },
-        thisYearTotal() {
-            let total = 0;
-            for(let sale of this.sales) {
-                total += sale.thisYearProfit;
-            }
-
-            return this.formatCurrency(total);
-        }
+       
     },
     
 }
